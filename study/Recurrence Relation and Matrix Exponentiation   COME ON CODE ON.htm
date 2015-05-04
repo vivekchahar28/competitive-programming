@@ -1,0 +1,1536 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0091)http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><!--
+	generated in 0.652 seconds
+	98190 bytes batcached for 300 seconds
+--><head profile="http://gmpg.org/xfn/11"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Recurrence Relation and Matrix Exponentiation | COME ON CODE ON</title>
+<link rel="pingback" href="http://comeoncodeon.wordpress.com/xmlrpc.php">
+<link rel="alternate" type="application/rss+xml" title="COME ON CODE ON » Feed" href="http://comeoncodeon.wordpress.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="COME ON CODE ON » Comments Feed" href="http://comeoncodeon.wordpress.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="COME ON CODE ON » Recurrence Relation and Matrix Exponentiation Comments Feed" href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/feed/">
+<script type="text/javascript" async="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/pinit_main.js"></script><script src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/cb=gapi.loaded_1" async=""></script><script src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/plusone.js" gapi_processed="true"></script><script type="text/javascript">
+/* <![CDATA[ */
+function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!='function'){window.onload=func;}else{window.onload=function(){oldonload();func();}}}
+/* ]]> */
+</script>
+<link rel="stylesheet" id="all-css-0" href="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/saved_resource" type="text/css" media="all">
+<!--[if IE 6]>
+<link rel='stylesheet' id='journalist-ie6-css'  href='http://s0.wp.com/wp-content/themes/pub/journalist/ie6.css?m=1270837707g&#038;ver=4.0-RC3' type='text/css' media='all' />
+<![endif]-->
+<link rel="stylesheet" id="all-css-2" href="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/saved_resource(1)" type="text/css" media="all">
+<link rel="stylesheet" id="print-css-2" href="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/global-print.css" type="text/css" media="print">
+<script type="text/javascript">
+/* <![CDATA[ */
+var LoggedOutFollow = {"invalid_email":"Your subscription did not succeed, please try again with a valid email address."};
+/* ]]> */
+</script><style type="text/css"></style>
+<script type="text/javascript" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/saved_resource(2)"></script>
+<link rel="stylesheet" id="all-css-0" href="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/style.css" type="text/css" media="all">
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='http://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563g&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://comeoncodeon.wordpress.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://s1.wp.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Pollard Rho Brent Integer Factorization" href="http://comeoncodeon.wordpress.com/2010/09/18/pollard-rho-brent-integer-factorization/">
+<link rel="next" title="Combination" href="http://comeoncodeon.wordpress.com/2011/07/31/combination/">
+<meta name="generator" content="WordPress.com">
+<link rel="canonical" href="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/Recurrence Relation and Matrix Exponentiation   COME ON CODE ON.htm">
+<link rel="shortlink" href="http://wp.me/prjMZ-7U">
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=json&url=http%3A%2F%2Fcomeoncodeon.wordpress.com%2F2011%2F05%2F08%2Frecurrence-relation-and-matrix-exponentiation%2F&for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=xml&url=http%3A%2F%2Fcomeoncodeon.wordpress.com%2F2011%2F05%2F08%2Frecurrence-relation-and-matrix-exponentiation%2F&for=wpcom-auto-discovery">
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Recurrence Relation and Matrix Exponentiation">
+<meta property="og:url" content="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/">
+<meta property="og:description" content="Recurrence relations appear many times in computer science. Using recurrence relation and dynamic programming we can calculate the nth term in O(n) time. But many times we need to calculate the nth...">
+<meta property="article:published_time" content="2011-05-08T11:56:35+00:00">
+<meta property="article:modified_time" content="2011-07-04T07:13:12+00:00">
+<meta property="article:author" content="http://comeoncodeon.wordpress.com/author/fr0d/">
+<meta property="og:site_name" content="COME ON CODE ON">
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg">
+<meta name="twitter:site" content="@wordpressdotcom">
+<meta name="twitter:card" content="summary">
+<meta property="fb:app_id" content="249643311490">
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom">
+<link rel="shortcut icon" type="image/x-icon" href="http://s2.wp.com/i/favicon.ico?m=1405977958g" sizes="16x16 24x24 32x32 48x48">
+<link rel="icon" type="image/x-icon" href="http://s2.wp.com/i/favicon.ico?m=1405977958g" sizes="16x16 24x24 32x32 48x48">
+<link rel="apple-touch-icon-precomposed" href="http://s0.wp.com/i/webclip.png?m=1391188133g">
+<link rel="openid.server" href="http://comeoncodeon.wordpress.com/?openidserver=1">
+<link rel="openid.delegate" href="http://comeoncodeon.wordpress.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="http://comeoncodeon.wordpress.com/osd.xml" title="COME ON CODE ON">
+<link rel="search" type="application/opensearchdescription+xml" href="http://wordpress.com/opensearch.xml" title="WordPress.com">
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style>
+		<style type="text/css">
+.widget_twitter li {
+	word-wrap: break-word;
+}
+</style>
+<meta name="application-name" content="COME ON CODE ON"><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-tooltip" content="A blog about programming and more programming."><meta name="msapplication-task" content="name=Subscribe;action-uri=http://comeoncodeon.wordpress.com/feed/;icon-uri=http://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=http://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico"><meta name="title" content="Recurrence Relation and Matrix Exponentiation | COME ON CODE ON on WordPress.com">
+<meta name="description" content="Recurrence relations appear many times in computer science. Using recurrence relation and dynamic programming we can calculate the nth term in O(n) time. But many times we need to calculate the nth in O(log n) time. This is where Matrix Exponentiation comes to rescue. We will specifically look at linear recurrences. A linear recurrence is…">
+
+<script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js">
+</script>
+<script type="text/javascript">
+if ( typeof GS_googleAddAdSenseService == 'function' ) { GS_googleAddAdSenseService("ca-pub-3443918307802676"); }
+if ( typeof GS_googleEnableAllServices == 'function' ) { GS_googleEnableAllServices() };
+</script>
+<script type="text/javascript" src="http://c.amazon-adsystem.com/aax2/amzn_ads.js"></script>
+<script type="text/javascript">
+try { amznads.getAds("3033","300x250"); } catch(e) { /* ignore */ }
+</script>
+<script type="text/javascript">
+var amznKeys = amznads.getKeys();
+if (typeof amznKeys != "undefined" && amznKeys != "") { for (var i =0; i < amznKeys.length; i++) { var key = amznKeys[i]; GA_googleAddAttr("amzn", key);} }
+document.close();
+</script>
+<script type="text/javascript">
+if ( typeof GA_googleAddSlot == 'function' ) { GA_googleAddSlot("ca-pub-3443918307802676", "wpcom_below_post_adsafe"); }
+</script>
+<script type="text/javascript">
+if ( typeof GA_googleFetchAds == 'function' ) { GA_googleFetchAds(); }
+</script>
+
+<script type="text/javascript">
+var wpcom_ads = { bid: 6510929, pt: 'permalink', wa: 0, as: 1, domain: 'comeoncodeon.wordpress.com', url: 'http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/', gid: '', };
+</script>
+<link rel="stylesheet" type="text/css" href="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/shCore.css"><link rel="stylesheet" type="text/css" href="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/shThemeDefault.css"><style type="text/css" id="syntaxhighlighteranchor"></style>
+<script type="text/javascript">
+	window.google_analytics_uacct = "UA-52447-2";
+</script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-52447-2']);
+	_gaq.push(['_setDomainName', 'wordpress.com']);
+	_gaq.push(['_initData']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})();
+</script><script type="text/javascript" async="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/ga.js"></script>
+<script charset="utf-8" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/rate.php"></script><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/services.css"><script src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/secureAnonymousFramework"></script><style type="text/css">* html #li_ui_li_gen_1413030632967_0 a#li_ui_li_gen_1413030632967_0-link{height:1% !important;}#li_ui_li_gen_1413030632967_0{position:relative !important;overflow:visible !important;display:block !important;}#li_ui_li_gen_1413030632967_0 span{-webkit-box-sizing:content-box !important;-moz-box-sizing:content-box !important;box-sizing:content-box !important;}#li_ui_li_gen_1413030632967_0 a#li_ui_li_gen_1413030632967_0-link{border:0 !important;height:20px !important;text-decoration:none !important;padding:0 !important;margin:0 !important;display:inline-block !important;}#li_ui_li_gen_1413030632967_0 a#li_ui_li_gen_1413030632967_0-link:link, #li_ui_li_gen_1413030632967_0 a#li_ui_li_gen_1413030632967_0-link:visited, #li_ui_li_gen_1413030632967_0 a#li_ui_li_gen_1413030632967_0-link:hover, #li_ui_li_gen_1413030632967_0 a#li_ui_li_gen_1413030632967_0-link:active{border:0 !important;text-decoration:none !important;}#li_ui_li_gen_1413030632967_0 a#li_ui_li_gen_1413030632967_0-link:after{content:"." !important;display:block !important;clear:both !important;visibility:hidden !important;line-height:0 !important;height:0 !important;}#li_ui_li_gen_1413030632967_0 #li_ui_li_gen_1413030632967_0-logo{background-image:url(https://static.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-position:0px -276px !important;background-repeat:no-repeat !important;background-size:initial !important;cursor:pointer !important;border:0 !important;text-indent:-9999em !important;overflow:hidden !important;padding:0 !important;margin:0 !important;position:absolute !important;left:0px !important;top:0px !important;display:block !important;width:20px !important;height:20px !important;float:right !important;border-radius:0 !important;-webkit-border-radius:0 !important;border-top-right-radius:2px !important;border-bottom-right-radius:2px !important;-webkit-border-top-right-radius:2px !important;-webkit-border-bottom-right-radius:2px !important;}#li_ui_li_gen_1413030632967_0.hovered #li_ui_li_gen_1413030632967_0-logo{background-position:-20px -276px !important;}#li_ui_li_gen_1413030632967_0.clicked #li_ui_li_gen_1413030632967_0-logo, #li_ui_li_gen_1413030632967_0.down #li_ui_li_gen_1413030632967_0-logo{background-position:-40px -276px !important;}.IN-shadowed #li_ui_li_gen_1413030632967_0 #li_ui_li_gen_1413030632967_0-logo{}#li_ui_li_gen_1413030632967_0 #li_ui_li_gen_1413030632967_0-title{color:#333 !important;cursor:pointer !important;display:block !important;white-space:nowrap !important;float:left !important;margin-left:1px !important;vertical-align:top !important;overflow:hidden !important;text-align:center !important;height:18px !important;padding:0 4px 0 23px !important;border:1px solid #000 !important;border-top-color:#E2E2E2 !important;border-right-color:#BFBFBF !important;border-bottom-color:#B9B9B9 !important;border-left-color:#E2E2E2 !important;border-left:0 !important;text-shadow:#FFFFFF -1px 1px 0 !important;line-height:20px !important;border-radius:0 !important;-webkit-border-radius:0 !important;border-top-right-radius:2px !important;border-bottom-right-radius:2px !important;-webkit-border-top-right-radius:2px !important;-webkit-border-bottom-right-radius:2px !important;background-color:#ECECEC !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEFEFE), color-stop(100%,#ECECEC)) !important; background-image: -webkit-linear-gradient(top, #FEFEFE 0%, #ECECEC 100%) !important;}#li_ui_li_gen_1413030632967_0.hovered #li_ui_li_gen_1413030632967_0-title{border:1px solid #000 !important;border-top-color:#ABABAB !important;border-right-color:#9A9A9A !important;border-bottom-color:#787878 !important;border-left-color:#04568B !important;border-left:0 !important;background-color:#EDEDED !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#EDEDED), color-stop(100%,#DEDEDE)) !important; background-image: -webkit-linear-gradient(top, #EDEDED 0%, #DEDEDE 100%) !important;}#li_ui_li_gen_1413030632967_0.clicked #li_ui_li_gen_1413030632967_0-title, #li_ui_li_gen_1413030632967_0.down #li_ui_li_gen_1413030632967_0-title{color:#666 !important;border:1px solid #000 !important;border-top-color:#B6B6B6 !important;border-right-color:#B3B3B3 !important;border-bottom-color:#9D9D9D !important;border-left-color:#49627B !important;border-left:0 !important;background-color:#DEDEDE !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#E3E3E3), color-stop(100%,#EDEDED)) !important; background-image: -webkit-linear-gradient(top, #E3E3E3 0%, #EDEDED 100%) !important;}.IN-shadowed #li_ui_li_gen_1413030632967_0 #li_ui_li_gen_1413030632967_0-title{}.IN-shadowed #li_ui_li_gen_1413030632967_0.hovered #li_ui_li_gen_1413030632967_0-title{}.IN-shadowed #li_ui_li_gen_1413030632967_0.clicked #li_ui_li_gen_1413030632967_0-title, .IN-shadowed #li_ui_li_gen_1413030632967_0.down #li_ui_li_gen_1413030632967_0-title{}#li_ui_li_gen_1413030632967_0 #li_ui_li_gen_1413030632967_0-title-text, #li_ui_li_gen_1413030632967_0 #li_ui_li_gen_1413030632967_0-title-text *{color:#333 !important;font-size:11px !important;font-family:Arial, sans-serif !important;font-weight:bold !important;font-style:normal !important;-webkit-font-smoothing:antialiased !important;display:inline-block !important;background:transparent none !important;vertical-align:top !important;height:18px !important;line-height:20px !important;float:none !important;}#li_ui_li_gen_1413030632967_0 #li_ui_li_gen_1413030632967_0-title-text strong{font-weight:bold !important;}#li_ui_li_gen_1413030632967_0 #li_ui_li_gen_1413030632967_0-title-text em{font-style:italic !important;}#li_ui_li_gen_1413030632967_0.hovered #li_ui_li_gen_1413030632967_0-title-text, #li_ui_li_gen_1413030632967_0.hovered #li_ui_li_gen_1413030632967_0-title-text *{color:#000 !important;}#li_ui_li_gen_1413030632967_0.clicked #li_ui_li_gen_1413030632967_0-title-text, #li_ui_li_gen_1413030632967_0.down #li_ui_li_gen_1413030632967_0-title-text, #li_ui_li_gen_1413030632967_0.clicked #li_ui_li_gen_1413030632967_0-title-text *, #li_ui_li_gen_1413030632967_0.down #li_ui_li_gen_1413030632967_0-title-text *{color:#666 !important;}#li_ui_li_gen_1413030632967_0 #li_ui_li_gen_1413030632967_0-title #li_ui_li_gen_1413030632967_0-mark{display:inline-block !important;width:0px !important;overflow:hidden !important;}.success #li_ui_li_gen_1413030632967_0 #li_ui_li_gen_1413030632967_0-title{color:#333 !important;border-top-color:#E2E2E2 !important;border-right-color:#BFBFBF !important;border-bottom-color:#B9B9B9 !important;border-left-color:#E2E2E2 !important;background-color:#ECECEC !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEFEFE), color-stop(100%,#ECECEC)) !important; background-image: -webkit-linear-gradient(top, #FEFEFE 0%, #ECECEC 100%) !important;}.success #li_ui_li_gen_1413030632967_0 #li_ui_li_gen_1413030632967_0-title-text, .success #li_ui_li_gen_1413030632967_0 #li_ui_li_gen_1413030632967_0-title-text *{color:#333 !important;}.IN-shadowed .success #li_ui_li_gen_1413030632967_0 #li_ui_li_gen_1413030632967_0-title{}.success #li_ui_li_gen_1413030632967_0.hovered #li_ui_li_gen_1413030632967_0-title{color:#000 !important;border-top-color:#ABABAB !important;border-right-color:#9A9A9A !important;border-bottom-color:#787878 !important;border-left-color:#04568B !important;background-color:#EDEDED !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#EDEDED), color-stop(100%,#DEDEDE)) !important; background-image: -webkit-linear-gradient(top, #EDEDED 0%, #DEDEDE 100%) !important;}.success #li_ui_li_gen_1413030632967_0.hovered #li_ui_li_gen_1413030632967_0-title-text, .success #li_ui_li_gen_1413030632967_0.hovered #li_ui_li_gen_1413030632967_0-title-text *{color:#000 !important;}.success #li_ui_li_gen_1413030632967_0.clicked #li_ui_li_gen_1413030632967_0-title, .success #li_ui_li_gen_1413030632967_0.down #li_ui_li_gen_1413030632967_0-title{color:#666 !important;border-top-color:#B6B6B6 !important;border-right-color:#B3B3B3 !important;border-bottom-color:#9D9D9D !important;border-left-color:#49627B !important;background-color:#DEDEDE !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#E3E3E3), color-stop(100%,#EDEDED)) !important; background-image: -webkit-linear-gradient(top, #E3E3E3 0%, #EDEDED 100%) !important;}.success #li_ui_li_gen_1413030632967_0.clicked #li_ui_li_gen_1413030632967_0-title-text, .success #li_ui_li_gen_1413030632967_0.down #li_ui_li_gen_1413030632967_0-title-text, .success #li_ui_li_gen_1413030632967_0.clicked #li_ui_li_gen_1413030632967_0-title-text *, .success #li_ui_li_gen_1413030632967_0.down #li_ui_li_gen_1413030632967_0-title-text *{color:#666 !important;}.IN-shadowed .success #li_ui_li_gen_1413030632967_0.clicked #li_ui_li_gen_1413030632967_0-title, .IN-shadowed .success #li_ui_li_gen_1413030632967_0.down #li_ui_li_gen_1413030632967_0-title{}#li_ui_li_gen_1413030632982_1-container.IN-right {display:inline-block !important;float:left !important;overflow:visible !important;position:relative !important;height:18px !important;padding-left:2px !important;line-height:1px !important;cursor:pointer !important;}#li_ui_li_gen_1413030632982_1.IN-right {display:block !important;float:left !important;height:18px !important;margin-right:4px !important;padding-right:4px !important;background-image:url(https://static.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-color:transparent !important;background-repeat:no-repeat !important;background-position:right -100px !important;}#li_ui_li_gen_1413030632982_1-inner.IN-right {display:block !important;float:left !important;padding-left:8px !important;text-align:center !important;background-image:url(https://static.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-color:transparent !important;background-repeat:no-repeat !important;background-position:0px -60px !important;}#li_ui_li_gen_1413030632982_1-content.IN-right {display:inline !important;font-size:11px !important;color:#04558B !important;font-weight:bold !important;font-family:Arial, sans-serif !important;line-height:18px !important;padding:0 5px 0 5px !important;}#li_ui_li_gen_1413030632982_1-container.IN-empty {display:none !important;}#li_ui_li_gen_1413030632982_1-container.IN-hidden #li_ui_li_gen_1413030632982_1 {display:none !important;}</style><style type="text/css" id="pd_popup_holder_style_381144_post_490">#pd_popup_holder_381144_post_490 { position:absolute; display:none; width:350px; height:auto; top:0px; left:0px; z-index:10000; border:solid 1px #CCC; background-color:white; padding:0px 15px;font-family:Arial,Sans;box-shadow: -10px 10px 20px rgba(0, 0, 0, .5);-webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, .25);-moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, .25); }</style><style type="text/css">a.PIN_1413030633612_pin_it_button_20 { cursor: pointer!important; background-repeat: none!important; background-size: 40px 60px!important; height: 20px!important; padding: 0!important; vertical-align: baseline!important; text-decoration: none!important; width: 40px!important; background-position: 0 -20px }
+a.PIN_1413030633612_pin_it_button_20:hover { background-position: 0 0px }
+a.PIN_1413030633612_pin_it_button_20:active, a.PIN_1413030633612_pin_it_button_20.PIN_1413030633612_hazClick { background-position: 0 -40px }
+a.PIN_1413030633612_pin_it_button_inline_20 { cursor: pointer!important; position: relative!important; display: inline-block!important; }
+a.PIN_1413030633612_pin_it_button_floating_20 { cursor: pointer!important; position: absolute!important; }
+a.PIN_1413030633612_pin_it_beside_20_pad { margin-right: 45px!important; }
+a.PIN_1413030633612_pin_it_button_en_20_red { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_en_rect_red_20_1.png)!important; }
+a.PIN_1413030633612_pin_it_button_en_20_white { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_en_rect_white_20_1.png)!important; }
+a.PIN_1413030633612_pin_it_button_en_20_gray { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_en_rect_gray_20_1.png)!important; }
+a.PIN_1413030633612_pin_it_button_ja_20_red { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_ja_rect_red_20_1.png)!important; }
+a.PIN_1413030633612_pin_it_button_ja_20_white { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_ja_rect_white_20_1.png)!important; }
+a.PIN_1413030633612_pin_it_button_ja_20_gray { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_ja_rect_gray_20_1.png)!important; }
+a.PIN_1413030633612_pin_it_above_20 span.PIN_1413030633612_pin_it_button_count { background: transparent url(http://passets.pinterest.com/images/pidgets/count_north_white_rect_20_1.png) 0 0 no-repeat!important; background-size: 40px 29px!important; position: absolute!important; bottom: 21px!important; left: 0px!important; height: 29px!important; width: 40px!important; font: 12px Arial, Helvetica, sans-serif!important; line-height: 24px!important; text-indent: 0!important;}
+a.PIN_1413030633612_pin_it_button_20 span.PIN_1413030633612_pin_it_button_count { position: absolute!important; color: #777!important; text-align: center!important; text-indent: 0!important; }
+a.PIN_1413030633612_pin_it_beside_20 span.PIN_1413030633612_pin_it_button_count, a.PIN_1413030633612_pin_it_beside_20 span.PIN_1413030633612_pin_it_button_count i { background-color: transparent!important; background-repeat: no-repeat!important; background-image: url(http://passets.pinterest.com/images/pidgets/count_east_white_rect_20_1.png)!important; }
+a.PIN_1413030633612_pin_it_beside_20 span.PIN_1413030633612_pin_it_button_count { padding: 0 3px 0 10px!important; background-size: 45px 20px!important; background-position: 0 0!important; position: absolute!important; top: 0!important; left: 41px!important; height: 20px!important; font: 10px Arial, Helvetica, sans-serif!important; line-height: 20px!important; }
+a.PIN_1413030633612_pin_it_beside_20 span.PIN_1413030633612_pin_it_button_count i { background-position: 100% 0!important; position: absolute!important; top: 0!important; right: -2px!important; height: 20px!important; width: 2px!important; }
+a.PIN_1413030633612_pin_it_button_20.PIN_1413030633612_pin_it_above { margin-top: 20px!important; }
+a.PIN_1413030633612_pin_it_button_28 { cursor: pointer!important; background-repeat: none!important; background-size: 56px 84px!important; height: 28px!important; padding: 0!important; vertical-align: baseline!important; text-decoration: none!important; width: 56px!important; background-position: 0 -28px }
+a.PIN_1413030633612_pin_it_button_28:hover { background-position: 0 0px }
+a.PIN_1413030633612_pin_it_button_28:active, a.PIN_1413030633612_pin_it_button_28.PIN_1413030633612_hazClick { background-position: 0 -56px }
+a.PIN_1413030633612_pin_it_button_inline_28 { cursor: pointer!important; position: relative!important; display: inline-block!important; }
+a.PIN_1413030633612_pin_it_button_floating_28 { cursor: pointer!important; position: absolute!important; }
+a.PIN_1413030633612_pin_it_beside_28_pad { margin-right: 50px!important;}
+a.PIN_1413030633612_pin_it_button_en_28_red { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_en_rect_red_28_1.png)!important; }
+a.PIN_1413030633612_pin_it_button_en_28_white { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_en_rect_white_28_1.png)!important; }
+a.PIN_1413030633612_pin_it_button_en_28_gray { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_en_rect_gray_28_1.png)!important; }
+a.PIN_1413030633612_pin_it_button_ja_28_red { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_ja_rect_red_28_1.png)!important; }
+a.PIN_1413030633612_pin_it_button_ja_28_white { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_ja_rect_white_28_1.png)!important; }
+a.PIN_1413030633612_pin_it_button_ja_28_gray { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_ja_rect_gray_28_1.png)!important; }
+a.PIN_1413030633612_pin_it_button_en_16_red_round, a.PIN_1413030633612_pin_it_button_en_32_red_round { background-repeat: none!important; margin: 0!important; padding: 0!important; vertical-align: baseline!important; text-decoration: none!important; }
+a.PIN_1413030633612_pin_it_button_en_16_red_round { height: 16px!important; width: 16px!important; background-size: 16px 16px!important; background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_en_round_red_16_1.png)!important;}
+a.PIN_1413030633612_pin_it_button_en_32_red_round { height: 32px!important; width: 32px!important; background-size: 32px 32px!important; background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_en_round_red_32_1.png)!important;}
+a.PIN_1413030633612_pin_it_button_inline_en_16_red_round, a.PIN_1413030633612_pin_it_button_inline_en_32_red_round { position: relative!important; display: inline-block!important; }
+a.PIN_1413030633612_pin_it_button_floating_en_16_red_round, a.PIN_1413030633612_pin_it_button_floating_en_32_red_round  { position: absolute!important; }
+a.PIN_1413030633612_pin_it_button_28 span.PIN_1413030633612_pin_it_button_count { position: absolute!important; color: #777!important; text-align: center!important; text-indent: 0!important; }
+a.PIN_1413030633612_pin_it_above_28 span.PIN_1413030633612_pin_it_button_count { background: transparent url(http://passets.pinterest.com/images/pidgets/count_north_white_rect_28_1.png) 0 0 no-repeat!important; background-size: 56px 37px!important; position: absolute!important; bottom: 29px!important; left: 0px!important; height: 37px!important; width: 56px!important; font: 15px Arial, Helvetica, sans-serif!important; line-height: 28px!important; text-indent: 0!important;}
+a.PIN_1413030633612_pin_it_beside_28 span.PIN_1413030633612_pin_it_button_count, a.PIN_1413030633612_pin_it_beside_28 span.PIN_1413030633612_pin_it_button_count i { background-color: transparent!important; background-repeat: no-repeat!important; background-image: url(http://passets.pinterest.com/images/pidgets/count_east_white_rect_28_1.png)!important; }
+a.PIN_1413030633612_pin_it_beside_28 span.PIN_1413030633612_pin_it_button_count { padding: 0 3px 0 10px!important; background-size: 63px 28px!important; background-position: 0 0!important; position: absolute!important; top: 0!important; left: 57px!important; height: 28px!important; font: 12px Arial, Helvetica, sans-serif!important; line-height: 28px!important; }
+a.PIN_1413030633612_pin_it_beside_28 span.PIN_1413030633612_pin_it_button_count i { background-position: 100% 0!important; position: absolute!important; top: 0!important; right: -2px!important; height: 28px!important; width: 2px!important; }
+a.PIN_1413030633612_pin_it_button_28.PIN_1413030633612_pin_it_above { margin-top: 28px!important; }
+a.PIN_1413030633612_follow_me_button, a.PIN_1413030633612_follow_me_button i { background-size: 200px 60px!important; background: transparent url(http://passets.pinterest.com/images/pidgets/bfs1.png) 0 0 no-repeat }
+a.PIN_1413030633612_follow_me_button { cursor: pointer!important; color: #444!important; display: inline-block!important; font: bold normal normal 11px/20px "Helvetica Neue",helvetica,arial,san-serif!important; height: 20px!important; margin: 0!important; padding: 0!important; position: relative!important; text-decoration: none!important; text-indent: 19px!important; vertical-align: baseline!important;}
+a.PIN_1413030633612_follow_me_button:hover { background-position: 0 -20px}
+a.PIN_1413030633612_follow_me_button:active  { background-position: 0 -40px}
+a.PIN_1413030633612_follow_me_button b { position: absolute!important; top: 3px!important; left: 3px!important; height: 14px!important; width: 14px!important; background-size: 14px 14px!important; background-image: url(http://passets.pinterest.com/images/pidgets/log1.png)!important; }
+a.PIN_1413030633612_follow_me_button i { position: absolute!important; top: 0!important; right: -4px!important; height: 20px!important; width: 4px!important; background-position: 100% 0px!important; }
+a.PIN_1413030633612_follow_me_button:hover i { background-position: 100% -20px!important;  }
+a.PIN_1413030633612_follow_me_button:active i { background-position: 100% -40px!important; }
+a.PIN_1413030633612_follow_me_button_28, a.PIN_1413030633612_follow_me_button_28 i { background-size: 400px 84px!important; background: transparent url(http://passets.pinterest.com/images/pidgets/bft1.png) 0 0 no-repeat }
+a.PIN_1413030633612_follow_me_button_28 { cursor: pointer!important; color: #444!important; display: inline-block!important; font: bold normal normal 13px/28px "Helvetica Neue",helvetica,arial,san-serif!important; height: 28px!important; margin: 0!important; padding: 0!important; position: relative!important; text-decoration: none!important; text-indent: 33px!important; vertical-align: baseline!important;}
+a.PIN_1413030633612_follow_me_button_28:hover { background-position: 0 -28px}
+a.PIN_1413030633612_follow_me_button_28:active  { background-position: 0 -56px}
+a.PIN_1413030633612_follow_me_button_28 b { position: absolute!important; top: 5px!important; left: 10px!important; height: 18px!important; width: 18px!important; background-size: 18px 18px!important; background-image: url(http://passets.pinterest.com/images/pidgets/smt1.png)!important; }
+a.PIN_1413030633612_follow_me_button_28 i { position: absolute!important; top: 0!important; right: -10px!important; height: 28px!important; width: 10px!important; background-position: 100% 0px!important; }
+a.PIN_1413030633612_follow_me_button_28:hover i { background-position: 100% -28px!important;  }
+a.PIN_1413030633612_follow_me_button_28:active i { background-position: 100% -56px!important; }
+span.PIN_1413030633612_embed_pin { -webkit-font-smoothing: antialiased!important; cursor: pointer!important; display: inline-block!important; text-align: center!important; width: 237px!important; overflow: hidden!important; vertical-align: top!important; }
+span.PIN_1413030633612_embed_pin.PIN_1413030633612_fancy { background: #fff!important; box-shadow: 0 1px 3px rgba(0, 0, 0, .33)!important; border-radius: 3px!important; }
+span.PIN_1413030633612_embed_pin a.PIN_1413030633612_embed_pin_link { display: block!important;  margin: 0 auto!important; padding: 0!important; position: relative!important;  line-height: 0}
+span.PIN_1413030633612_embed_pin img.PIN_1413030633612_embed_pin_link_img { border: 0!important; margin: 0!important; padding: 0!important; border-bottom: 1px solid rgba(0, 0, 0, .09)!important;}
+span.PIN_1413030633612_embed_pin a.PIN_1413030633612_embed_pin_link i.PIN_1413030633612_repin { left: 12px!important; top: 12px!important; position: absolute!important; height: 20px!important; width: 40px!important; background-size: 40px 60px!important;  background: transparent url(http://passets.pinterest.com/images/pidgets/pinit_bg_en_rect_red_20_1.png) }
+span.PIN_1413030633612_embed_pin a.PIN_1413030633612_embed_pin_link i.PIN_1413030633612_repin_ja { left: 12px!important; top: 12px!important; position: absolute!important; height: 20px!important; width: 40px!important; background-size: 40px 60px!important; background: transparent url(http://passets.pinterest.com/images/pidgets/pinit_bg_ja_rect_red_20_1.png) }
+span.PIN_1413030633612_embed_pin a.PIN_1413030633612_embed_pin_link i.PIN_1413030633612_repin:hover, span.PIN_1413030633612_embed_pin a.PIN_1413030633612_embed_pin_link i.PIN_1413030633612_repin_ja:hover { background-position: 0 -20px!important; }
+span.PIN_1413030633612_embed_pin a.PIN_1413030633612_embed_pin_link i.PIN_1413030633612_repin.PIN_1413030633612_hazClick, span.PIN_1413030633612_embed_pin a.PIN_1413030633612_embed_pin_link i.PIN_1413030633612_repin_ja.PIN_1413030633612_hazClick { background-position: 0 -40px!important; }
+span.PIN_1413030633612_embed_pin a.PIN_1413030633612_embed_pin_link i.PIN_1413030633612_play { display: block!important; width: 50px!important; white-space: pre!important; font-family: "Helvetica Neue",helvetica,arial,san-serif!important; font-weight: bold!important; font-style: normal!important; font-size: 9px!important; line-height: 12px!important; margin: 0!important; position: absolute!important; bottom: 12px!important; left: 12px!important; text-decoration: none!important; background: rgba(0, 0, 0, .4)!important; color: rgba(255, 255, 255, 1)!important; border-radius: 13px!important; padding: 5px 0!important; box-shadow: 0 0 2px rgba(0, 0, 0, .2)!important; border: 2px solid rgba(255, 255, 255, .68)!important;}
+span.PIN_1413030633612_embed_pin a.PIN_1413030633612_embed_pin_link i.PIN_1413030633612_play:hover { background: rgba(0, 0, 0, .8)!important; color: #fff!important; }
+span.PIN_1413030633612_embed_pin span.PIN_1413030633612_embed_pin_desc { color: #363636!important; white-space: normal!important; border-bottom: 1px solid rgba(0, 0, 0, .09)!important;!important; display: block!important; font-family: "Helvetica Neue", arial, sans-serif!important; font-size: 13px!important; line-height: 17px!important; padding: 12px!important; text-align: left!important; }
+span.PIN_1413030633612_embed_pin span.PIN_1413030633612_embed_pin_attrib { color: #a8a8a8!important; font-family: "Helvetica Neue", sans-serif!important; font-size: 11px!important; line-height: 18px!important; margin-top: 12px!important; font-weight: bold!important; display: block!important;}
+span.PIN_1413030633612_embed_pin span.PIN_1413030633612_embed_pin_attrib img.PIN_1413030633612_embed_pin_attrib_icon { height: 16px!important; width: 16px!important; vertical-align: middle!important; padding: 0!important; margin: 0 5px 0 0!important; float: left!important;}
+span.PIN_1413030633612_embed_pin span.PIN_1413030633612_embed_pin_attrib a { color: #a8a8a8!important; text-decoration: none!important;}
+span.PIN_1413030633612_embed_pin span.PIN_1413030633612_embed_pin_stats { display: block!important; }
+span.PIN_1413030633612_embed_pin span.PIN_1413030633612_embed_pin_stats span.PIN_1413030633612_embed_pin_stats_repin_count, span.PIN_1413030633612_embed_pin span.PIN_1413030633612_embed_pin_stats span.PIN_1413030633612_embed_pin_stats_like_count { display: inline-block!important; padding-left: 17px!important; padding-right: 10px!important; color: #a8a8a8!important; font-family: "Helvetica Neue", sans-serif!important; font-size: 11px!important; line-height: 12px!important; margin-top: 12px!important; font-weight: bold!important; }
+span.PIN_1413030633612_embed_pin span.PIN_1413030633612_embed_pin_stats span.PIN_1413030633612_embed_pin_stats_repin_count { background: url(data:image/png!important;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAALCAAAAABq7uO+AAAASklEQVQI10WNMQrAMBRCvf/Z3pQcImPplsIPdqhNXOSJqLxVtnWQsuUO9IM3cHlV8dSSDZQHAOPH2YA2FU+qtH7MRhaVh/xt/PQCEW6N4EV+CPEAAAAASUVORK5CYII=) 0 0 no-repeat!important; }
+span.PIN_1413030633612_embed_pin span.PIN_1413030633612_embed_pin_stats span.PIN_1413030633612_embed_pin_stats_like_count { background: url(data:image/png!important;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAKCAAAAAClR+AmAAAAUElEQVR4AT2HMQpFIQwEc/+zbXhFLBW8QUihIAT2E8Q/xe6M0Jv2zK7NKUcBzAlAjzjqtdZl4c8S2nOjMPS6BoWMr/wLVnAbYJs3mGMkXzx+OeRqUf5HHRoAAAAASUVORK5CYII=) 0 2px no-repeat!important; }
+span.PIN_1413030633612_embed_pin a.PIN_1413030633612_embed_pin_text { padding: 12px!important; position: relative!important; text-decoration: none!important; display: block!important; font-weight: bold!important; color: #b7b7b7!important; font-family: "Helvetica Neue", arial, sans-serif!important; font-size: 11px!important; line-height: 14px!important; height: 30px!important; text-align: left!important; }
+span.PIN_1413030633612_embed_pin a.PIN_1413030633612_embed_pin_text:hover { background: #eee!important;}
+span.PIN_1413030633612_embed_pin a.PIN_1413030633612_embed_pin_text img.PIN_1413030633612_embed_pin_text_avatar { border-radius: 15px!important; overflow: hidden!important; height: 30px!important; width: 30px!important; vertical-align: middle!important; margin: 0 8px 12px 0!important; float: left!important;}
+span.PIN_1413030633612_embed_pin a.PIN_1413030633612_embed_pin_text span.PIN_1413030633612_embed_pin_text_container_pinner, span.PIN_1413030633612_embed_pin a.PIN_1413030633612_embed_pin_text span.PIN_1413030633612_embed_pin_text_container_board { display: block!important; width: 175px!important; white-space: nowrap!important; overflow: hidden!important; text-overflow: ellipsis!important;}
+span.PIN_1413030633612_embed_pin a.PIN_1413030633612_embed_pin_text span.PIN_1413030633612_embed_pin_text_container_pinner { color: #777!important;}
+span.PIN_1413030633612_embed_pin a.PIN_1413030633612_embed_pin_text b.PIN_1413030633612_embed_pin_link_shield { position: absolute!important; top: 0!important; left: 0!important; height: 100%!important; width: 100%!important; }
+span.PIN_1413030633612_embed_grid { display: inline-block!important; margin: 0!important; padding:10px 0!important; position: relative!important; text-align: center}
+span.PIN_1413030633612_embed_grid.PIN_1413030633612_fancy { background: #fff!important; box-shadow: 0 0 3px #aaa!important; border-radius: 3px!important; }
+span.PIN_1413030633612_embed_grid span.PIN_1413030633612_embed_grid_hd { display: block!important; margin: 0 10px!important; padding: 0!important; height: 45px!important; position: relative!important; background: #fff}
+span.PIN_1413030633612_embed_grid span.PIN_1413030633612_embed_grid_hd a.PIN_1413030633612_avatar { position: absolute!important; top: 0!important; left: 0!important; height: 36px!important; width: 36px!important; }
+span.PIN_1413030633612_embed_grid span.PIN_1413030633612_embed_grid_hd a.PIN_1413030633612_avatar::before { position: absolute!important; content:""!important; z-index: 2!important; top: 0!important; left: 0!important; right: 0!important; bottom: 0!important; box-shadow: inset 0 0 2px #888!important;  border-radius: 3px!important; }
+span.PIN_1413030633612_embed_grid span.PIN_1413030633612_embed_grid_hd a.PIN_1413030633612_avatar img { position: relative!important; height: 36px!important; width: 36px!important; margin: 0!important; padding: 0!important; border-radius: 3px!important; border: none!important;}
+span.PIN_1413030633612_embed_grid span.PIN_1413030633612_embed_grid_hd a { text-decoration: none!important; background: transparent!important; cursor: pointer!important; white-space: nowrap!important; position: absolute!important; left: 44px!important; text-align: left!important; overflow: hidden!important; text-overflow: ellipsis!important; }
+span.PIN_1413030633612_embed_grid span.PIN_1413030633612_embed_grid_hd a:hover { text-decoration: none!important; background: #fff!important; }
+span.PIN_1413030633612_embed_grid span.PIN_1413030633612_embed_grid_hd a:active { text-decoration: none!important; background: #fff!important; }
+span.PIN_1413030633612_embed_grid span.PIN_1413030633612_embed_grid_hd a.PIN_1413030633612_embed_grid_first { top: 2px!important; font-family: helvetica, sans-serif!important; font-weight: bold!important; color:#333!important; font-size: 14px!important; line-height: 16px!important; }
+span.PIN_1413030633612_embed_grid span.PIN_1413030633612_embed_grid_hd a.PIN_1413030633612_embed_grid_second { bottom: 11px!important; font-family: helvetica, sans-serif!important; color:#8e8e8e!important; font-size: 12px!important; line-height: 14px!important; }
+span.PIN_1413030633612_embed_grid span.PIN_1413030633612_embed_grid_hd a.PIN_1413030633612_embed_grid_mid { top: 12px!important; font-family: helvetica, sans-serif!important; font-weight: bold!important; color:#333!important; font-size: 14px!important; line-height: 16px!important; }
+span.PIN_1413030633612_embed_grid span.PIN_1413030633612_embed_grid_bd { display:block!important; margin: 0 10px!important; border-radius: 2px!important; position: relative!important; overflow: hidden }
+span.PIN_1413030633612_embed_grid span.PIN_1413030633612_embed_grid_scrolling_okay { overflow: auto!important; }
+span.PIN_1413030633612_embed_grid span.PIN_1413030633612_embed_grid_bd span.PIN_1413030633612_embed_grid_ct { display:block!important; position: relative!important; overflow: hidden!important; }
+span.PIN_1413030633612_embed_grid span.PIN_1413030633612_embed_grid_bd a.PIN_1413030633612_embed_grid_th { cursor: pointer!important; display: inline-block!important; position: absolute!important; overflow: hidden!important; }
+span.PIN_1413030633612_embed_grid span.PIN_1413030633612_embed_grid_bd a.PIN_1413030633612_embed_grid_th::before { position: absolute!important; content:""!important; z-index: 2!important; top: 0!important; left: 0!important; right: 0!important; bottom: 0!important; box-shadow: inset 0 0 2px #888!important; }
+span.PIN_1413030633612_embed_grid span.PIN_1413030633612_embed_grid_bd a.PIN_1413030633612_embed_grid_th img.PIN_1413030633612_embed_grid_img { border: none!important; position: absolute!important; top: 50%!important; left: 0!important; }
+a.PIN_1413030633612_embed_grid_ft { cursor: pointer!important; text-shadow: 0 1px #fff!important; display: block!important; text-align: center!important; border: 1px solid #ccc!important; margin: 10px 10px 0!important; height: 31px!important; line-height: 30px!important;border-radius: 2px!important; text-decoration: none!important; font-family: Helvetica!important; font-weight: bold!important; font-size: 13px!important; color: #746d6a!important; background: #f4f4f4 url(http://passets.pinterest.com/images/pidgets/board_button_link.png) 0 0 repeat-x}
+a.PIN_1413030633612_embed_grid_ft:hover { text-decoration: none!important; background: #fefefe url(http://passets.pinterest.com/images/pidgets/board_button_hover.png) 0 0 repeat-x}
+a.PIN_1413030633612_embed_grid_ft:active { text-decoration: none!important; background: #e4e4e4 url(http://passets.pinterest.com/images/pidgets/board_button_active.png) 0 0 repeat-x}
+a.PIN_1413030633612_embed_grid_ft span.PIN_1413030633612_embed_grid_ft_logo { vertical-align: top!important; display: inline-block!important; margin-left: 2px!important; height: 30px!important; width: 66px!important; background: transparent url(http://passets.pinterest.com/images/pidgets/board_button_logo.png) 50% 48% no-repeat!important; }
+.PIN_1413030633612_hidden { display:none!important; }</style></head>
+
+<body class="single single-post postid-490 single-format-standard mp6 highlander-enabled highlander-light">
+<div id="container" class="group">
+
+<h1><a href="http://comeoncodeon.wordpress.com/">COME ON CODE ON</a></h1>
+<div id="bubble"><p>A blog about programming and more programming.</p></div> <!-- erase this line if you want to turn the bubble off -->
+
+<div id="content" class="group">
+<div class="post-490 post type-post status-publish format-standard hentry category-programming tag-algorithm-2 tag-code tag-complexity tag-divide-and-conquer tag-equation tag-exponentiation tag-fibonacci tag-matrix tag-recurrence tag-relation tag-time">
+	<h2 id="post-490">Recurrence Relation and Matrix&nbsp;Exponentiation</h2>
+			<p class="comments"><a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#comments">with 13 comments</a></p>
+	
+	<div class="main">
+		<p>Recurrence relations appear many times in computer science. Using recurrence relation and dynamic programming we can calculate the <em>n<sup>th</sup></em> term in O(n) time. But many times we need to calculate the <em>n<sup>th</sup></em> in O(log n) time. This is where Matrix Exponentiation comes to rescue.</p>
+<p>We will specifically look at linear recurrences. A linear recurrence is a sequence of vectors defined by the equation <em>X<sub>i+1</sub></em> = M <em>X<sub>i</sub></em> for some constant matrix M. So our aim is to find this constant matrix M, for a given recurrence relation.</p>
+<p>Let’s first start by looking at the common structure of our three matrices <em>X<sub>i+1</sub></em>, <em>X<sub>i</sub></em> and M. For a recurrence relation where the next term is dependent on last k terms, <em>X<sub>i+1</sub></em> and <em>X<sub>i+1</sub></em> are matrices of size 1 x k and M is a matrix of size k x k.</p>
+<pre>| f(n+1)   |       | f(n)   |
+|  f(n)    |       | f(n-1) |
+| f(n-1)   | = M x | f(n-2) |
+| ......   |       | ...... |
+| f(n-k+1) |       | f(n-k) |</pre>
+<p>Let’s look at different type of recurrence relations and how to find M.</p>
+<p><strong>1.</strong> Let’s start with the most common recurrence relation in computer science, The Fibonacci Sequence. <em>F<sub>i+1</sub></em> = <em>F<sub>i</sub></em> + <em>F<sub>i-1</sub></em>.</p>
+<pre>| f(n+1) | = M x | f(n)   |
+| f(n)   |       | f(n-1) |</pre>
+<p>Now we know that M is a 2 x 2 matrix. Let it be</p>
+<pre>| f(n+1) | = | a b | x | f(n)   |
+| f(n)   |   | c d |   | f(n-1) |</pre>
+<p>Now a*f(n) + b*f(n-1) = f(n+1) and c*f(n) + d*f(n-1) = f(n). Solving these two equations we get a=1,b=1,c=1 and d=0. So,</p>
+<pre>| f(n+1) | = | 1 1 | x | f(n)   |
+| f(n)   |   | 1 0 |   | f(n-1) |</pre>
+<p><strong>2.</strong> For recurrence relation f(n) = a*f(n-1) + b*f(n-2) + c*f(n-3), we get</p>
+<pre>| f(n+1) | = | a b c | x | f(n)   |
+| f(n)   |   | 1 0 0 |   | f(n-1) |
+| f(n-1) |   | 0 1 0 |   | f(n-2) |</pre>
+<p><strong>3.</strong> What if the recurrence relation is f(n) = a*f(n-1) + b*f(n-2) + c, where c is a constant. We can also add it in the matrices as a state.</p>
+<pre>| f(n+1) | = | a b 1 | x | f(n)   |
+| f(n)   |   | 1 0 0 |   | f(n-1) |
+| c      |   | 0 0 1 |   | c      |</pre>
+<p><strong>4.</strong> If a recurrence relation is given like this f(n) = f(n-1) if n is odd, f(n-2) otherwise, we can convert it to f(n) = (n&amp;1) * f(n-1) + (!(n&amp;1)) * f(n-2) and substitute the value accordingly in the matrix.</p>
+<pre></pre>
+<p><strong>5.</strong>If there are more than one recurrence relation, g(n) = a*g(n-1) + b*g(n-2) + c*f(n), and, f(n) = d*f(n-1) + e*f(n-2). We can still define the matrix X in following way</p>
+<pre>| g(n+1) |   | a b c 0 |   | g(n)   |
+| g(n)   | = | 1 0 0 0 | x | g(n-1) |
+| f(n+2) |   | 0 0 d e |   | f(n+1) |
+| f(n+1) |   | 0 0 1 0 |   | f(n)   |</pre>
+<p>Now that we have got our matrix M, how are we going to find the nth term.<br>
+<em>X<sub>i+1</sub></em> = M <em>X<sub>i</sub></em><br>
+(Multiplying M both sides)<br>
+M * <em>X<sub>i+1</sub></em> = M * M <em>X<sub>i</sub></em><br>
+<em>X<sub>i+2</sub></em> = M^2 <em>X<sub>i</sub></em><br>
+..<br>
+<em>X<sub>i+k</sub></em> = M^k <em>X<sub>i</sub></em></p>
+<p>So all we need now is to find the matrix M^k to find the k-th term. For example in the case of Fibonacci Sequence,</p>
+<pre>M^2 = | 2 1 |
+      | 1 1 |</pre>
+<p>Hence F(2) = 2.</p>
+<p>Now we need to learn to find M^k in <em>O</em>(<em>n<sup>3</sup></em> log <em>b</em>) time. The brute force approach to calculate a^b takes O(b) time, but using a recursive divide-and-conquer algorithm takes only O(log b) time:</p>
+<ul>
+<li>If b = 0, then the answer is 1.</li>
+<li>If b = 2k is even, then <em>a<sup>b</sup></em> = (<em>a<sup>k</sup></em>)<em><sup>2</sup></em>.</li>
+<li>If b is odd, then <em>a<sup>b</sup></em> = <em>a * a<sup>b-1</sup></em>.</li>
+</ul>
+<p>We take a similar approach for Matrix Exponentiation. The multiplication part takes the O(<em>n<sup>3</sup></em>) time and hence the overall complexity is <em>O</em>(<em>n<sup>3</sup></em> log <em>b</em>). Here’s a sample code in C++ using template class:</p>
+<div><div id="highlighter_927129" class="syntaxhighlighter  cpp"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div><div class="line number27 index26 alt2">27</div><div class="line number28 index27 alt1">28</div><div class="line number29 index28 alt2">29</div><div class="line number30 index29 alt1">30</div><div class="line number31 index30 alt2">31</div><div class="line number32 index31 alt1">32</div><div class="line number33 index32 alt2">33</div><div class="line number34 index33 alt1">34</div><div class="line number35 index34 alt2">35</div><div class="line number36 index35 alt1">36</div><div class="line number37 index36 alt2">37</div><div class="line number38 index37 alt1">38</div><div class="line number39 index38 alt2">39</div><div class="line number40 index39 alt1">40</div><div class="line number41 index40 alt2">41</div><div class="line number42 index41 alt1">42</div><div class="line number43 index42 alt2">43</div><div class="line number44 index43 alt1">44</div><div class="line number45 index44 alt2">45</div><div class="line number46 index45 alt1">46</div><div class="line number47 index46 alt2">47</div><div class="line number48 index47 alt1">48</div><div class="line number49 index48 alt2">49</div><div class="line number50 index49 alt1">50</div><div class="line number51 index50 alt2">51</div><div class="line number52 index51 alt1">52</div><div class="line number53 index52 alt2">53</div><div class="line number54 index53 alt1">54</div><div class="line number55 index54 alt2">55</div><div class="line number56 index55 alt1">56</div><div class="line number57 index56 alt2">57</div><div class="line number58 index57 alt1">58</div><div class="line number59 index58 alt2">59</div><div class="line number60 index59 alt1">60</div><div class="line number61 index60 alt2">61</div><div class="line number62 index61 alt1">62</div><div class="line number63 index62 alt2">63</div><div class="line number64 index63 alt1">64</div><div class="line number65 index64 alt2">65</div><div class="line number66 index65 alt1">66</div><div class="line number67 index66 alt2">67</div><div class="line number68 index67 alt1">68</div><div class="line number69 index68 alt2">69</div><div class="line number70 index69 alt1">70</div><div class="line number71 index70 alt2">71</div><div class="line number72 index71 alt1">72</div><div class="line number73 index72 alt2">73</div><div class="line number74 index73 alt1">74</div><div class="line number75 index74 alt2">75</div><div class="line number76 index75 alt1">76</div><div class="line number77 index76 alt2">77</div><div class="line number78 index77 alt1">78</div><div class="line number79 index78 alt2">79</div><div class="line number80 index79 alt1">80</div><div class="line number81 index80 alt2">81</div><div class="line number82 index81 alt1">82</div><div class="line number83 index82 alt2">83</div><div class="line number84 index83 alt1">84</div><div class="line number85 index84 alt2">85</div><div class="line number86 index85 alt1">86</div><div class="line number87 index86 alt2">87</div><div class="line number88 index87 alt1">88</div><div class="line number89 index88 alt2">89</div><div class="line number90 index89 alt1">90</div><div class="line number91 index90 alt2">91</div><div class="line number92 index91 alt1">92</div><div class="line number93 index92 alt2">93</div><div class="line number94 index93 alt1">94</div><div class="line number95 index94 alt2">95</div><div class="line number96 index95 alt1">96</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp preprocessor">#include&lt;iostream&gt;</code></div><div class="line number2 index1 alt1"><code class="cpp keyword bold">using</code> <code class="cpp keyword bold">namespace</code> <code class="cpp plain">std;</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="cpp keyword bold">template</code><code class="cpp plain">&lt; </code><code class="cpp keyword bold">class</code> <code class="cpp plain">T &gt;</code></div><div class="line number5 index4 alt2"><code class="cpp keyword bold">class</code> <code class="cpp plain">Matrix</code></div><div class="line number6 index5 alt1"><code class="cpp plain">{</code></div><div class="line number7 index6 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">public</code><code class="cpp plain">:</code></div><div class="line number8 index7 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp color1 bold">int</code> <code class="cpp plain">m,n;</code></div><div class="line number9 index8 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">T *data;</code></div><div class="line number10 index9 alt1">&nbsp;</div><div class="line number11 index10 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">Matrix( </code><code class="cpp color1 bold">int</code> <code class="cpp plain">m, </code><code class="cpp color1 bold">int</code> <code class="cpp plain">n );</code></div><div class="line number12 index11 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">Matrix( </code><code class="cpp keyword bold">const</code> <code class="cpp plain">Matrix&lt; T &gt; &amp;matrix );</code></div><div class="line number13 index12 alt2">&nbsp;</div><div class="line number14 index13 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">const</code> <code class="cpp plain">Matrix&lt; T &gt; &amp;operator=( </code><code class="cpp keyword bold">const</code> <code class="cpp plain">Matrix&lt; T &gt; &amp;A );</code></div><div class="line number15 index14 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">const</code> <code class="cpp plain">Matrix&lt; T &gt; operator*( </code><code class="cpp keyword bold">const</code> <code class="cpp plain">Matrix&lt; T &gt; &amp;A );</code></div><div class="line number16 index15 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">const</code> <code class="cpp plain">Matrix&lt; T &gt; operator^( </code><code class="cpp color1 bold">int</code> <code class="cpp plain">P );</code></div><div class="line number17 index16 alt2">&nbsp;</div><div class="line number18 index17 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">~Matrix();</code></div><div class="line number19 index18 alt2"><code class="cpp plain">};</code></div><div class="line number20 index19 alt1">&nbsp;</div><div class="line number21 index20 alt2"><code class="cpp keyword bold">template</code><code class="cpp plain">&lt; </code><code class="cpp keyword bold">class</code> <code class="cpp plain">T &gt;</code></div><div class="line number22 index21 alt1"><code class="cpp plain">Matrix&lt; T &gt;::Matrix( </code><code class="cpp color1 bold">int</code> <code class="cpp plain">m, </code><code class="cpp color1 bold">int</code> <code class="cpp plain">n )</code></div><div class="line number23 index22 alt2"><code class="cpp plain">{</code></div><div class="line number24 index23 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">this</code><code class="cpp plain">-&gt;m = m;</code></div><div class="line number25 index24 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">this</code><code class="cpp plain">-&gt;n = n;</code></div><div class="line number26 index25 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">data = </code><code class="cpp keyword bold">new</code> <code class="cpp plain">T[m*n];</code></div><div class="line number27 index26 alt2"><code class="cpp plain">}</code></div><div class="line number28 index27 alt1">&nbsp;</div><div class="line number29 index28 alt2"><code class="cpp keyword bold">template</code><code class="cpp plain">&lt; </code><code class="cpp keyword bold">class</code> <code class="cpp plain">T &gt;</code></div><div class="line number30 index29 alt1"><code class="cpp plain">Matrix&lt; T &gt;::Matrix( </code><code class="cpp keyword bold">const</code> <code class="cpp plain">Matrix&lt; T &gt; &amp;A )</code></div><div class="line number31 index30 alt2"><code class="cpp plain">{</code></div><div class="line number32 index31 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">this</code><code class="cpp plain">-&gt;m = A.m;</code></div><div class="line number33 index32 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">this</code><code class="cpp plain">-&gt;n = A.n;</code></div><div class="line number34 index33 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">data = </code><code class="cpp keyword bold">new</code> <code class="cpp plain">T[m*n];</code></div><div class="line number35 index34 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">for</code><code class="cpp plain">( </code><code class="cpp color1 bold">int</code> <code class="cpp plain">i = 0; i &lt; m * n; i++ )</code></div><div class="line number36 index35 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">data[i] = A.data[i];</code></div><div class="line number37 index36 alt2"><code class="cpp plain">}</code></div><div class="line number38 index37 alt1">&nbsp;</div><div class="line number39 index38 alt2"><code class="cpp keyword bold">template</code><code class="cpp plain">&lt; </code><code class="cpp keyword bold">class</code> <code class="cpp plain">T &gt;</code></div><div class="line number40 index39 alt1"><code class="cpp plain">Matrix&lt; T &gt;::~Matrix()</code></div><div class="line number41 index40 alt2"><code class="cpp plain">{</code></div><div class="line number42 index41 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">delete</code> <code class="cpp plain">[] data;</code></div><div class="line number43 index42 alt2"><code class="cpp plain">}</code></div><div class="line number44 index43 alt1">&nbsp;</div><div class="line number45 index44 alt2"><code class="cpp keyword bold">template</code><code class="cpp plain">&lt; </code><code class="cpp keyword bold">class</code> <code class="cpp plain">T &gt;</code></div><div class="line number46 index45 alt1"><code class="cpp keyword bold">const</code> <code class="cpp plain">Matrix&lt; T &gt; &amp;Matrix&lt; T &gt;::operator=( </code><code class="cpp keyword bold">const</code> <code class="cpp plain">Matrix&lt; T &gt; &amp;A )</code></div><div class="line number47 index46 alt2"><code class="cpp plain">{</code></div><div class="line number48 index47 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">if</code><code class="cpp plain">( &amp;A != </code><code class="cpp keyword bold">this</code> <code class="cpp plain">)</code></div><div class="line number49 index48 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">{</code></div><div class="line number50 index49 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">delete</code> <code class="cpp plain">[] data;</code></div><div class="line number51 index50 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">m = A.m;</code></div><div class="line number52 index51 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">n = A.n;</code></div><div class="line number53 index52 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">data = </code><code class="cpp keyword bold">new</code> <code class="cpp plain">T[m*n];</code></div><div class="line number54 index53 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">for</code><code class="cpp plain">( </code><code class="cpp color1 bold">int</code> <code class="cpp plain">i = 0; i &lt; m * n; i++ )</code></div><div class="line number55 index54 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">data[i] = A.data[i];</code></div><div class="line number56 index55 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">}</code></div><div class="line number57 index56 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">return</code> <code class="cpp plain">*</code><code class="cpp keyword bold">this</code><code class="cpp plain">;</code></div><div class="line number58 index57 alt1"><code class="cpp plain">}</code></div><div class="line number59 index58 alt2">&nbsp;</div><div class="line number60 index59 alt1"><code class="cpp keyword bold">template</code><code class="cpp plain">&lt; </code><code class="cpp keyword bold">class</code> <code class="cpp plain">T &gt;</code></div><div class="line number61 index60 alt2"><code class="cpp keyword bold">const</code> <code class="cpp plain">Matrix&lt; T &gt; Matrix&lt; T &gt;::operator*( </code><code class="cpp keyword bold">const</code> <code class="cpp plain">Matrix&lt; T &gt; &amp;A )</code></div><div class="line number62 index61 alt1"><code class="cpp plain">{</code></div><div class="line number63 index62 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">Matrix C( m, A.n );</code></div><div class="line number64 index63 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">for</code><code class="cpp plain">( </code><code class="cpp color1 bold">int</code> <code class="cpp plain">i = 0; i &lt; m; ++i )</code></div><div class="line number65 index64 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">for</code><code class="cpp plain">( </code><code class="cpp color1 bold">int</code> <code class="cpp plain">j = 0; j &lt; A.n; ++j )</code></div><div class="line number66 index65 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">{</code></div><div class="line number67 index66 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">C.data[i*C.n+j]=0;</code></div><div class="line number68 index67 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">for</code><code class="cpp plain">( </code><code class="cpp color1 bold">int</code> <code class="cpp plain">k = 0; k &lt; n; ++k )</code></div><div class="line number69 index68 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">C.data[i*C.n+j] = C.data[i*C.n+j] + data[i*n+k]*A.data[k*A.n+j];</code></div><div class="line number70 index69 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">}</code></div><div class="line number71 index70 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">return</code> <code class="cpp plain">C;</code></div><div class="line number72 index71 alt1"><code class="cpp plain">}</code></div><div class="line number73 index72 alt2">&nbsp;</div><div class="line number74 index73 alt1"><code class="cpp keyword bold">template</code><code class="cpp plain">&lt; </code><code class="cpp keyword bold">class</code> <code class="cpp plain">T &gt;</code></div><div class="line number75 index74 alt2"><code class="cpp keyword bold">const</code> <code class="cpp plain">Matrix&lt; T &gt; Matrix&lt; T &gt;::operator^( </code><code class="cpp color1 bold">int</code> <code class="cpp plain">P )</code></div><div class="line number76 index75 alt1"><code class="cpp plain">{</code></div><div class="line number77 index76 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">if</code><code class="cpp plain">( P == 1 ) </code><code class="cpp keyword bold">return</code> <code class="cpp plain">(*</code><code class="cpp keyword bold">this</code><code class="cpp plain">);</code></div><div class="line number78 index77 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">if</code><code class="cpp plain">( P &amp; 1 ) </code><code class="cpp keyword bold">return</code> <code class="cpp plain">(*</code><code class="cpp keyword bold">this</code><code class="cpp plain">) * ((*</code><code class="cpp keyword bold">this</code><code class="cpp plain">) ^ (P-1));</code></div><div class="line number79 index78 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">Matrix B = (*</code><code class="cpp keyword bold">this</code><code class="cpp plain">) ^ (P/2);</code></div><div class="line number80 index79 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">return</code> <code class="cpp plain">B*B;</code></div><div class="line number81 index80 alt2"><code class="cpp plain">}</code></div><div class="line number82 index81 alt1">&nbsp;</div><div class="line number83 index82 alt2"><code class="cpp color1 bold">int</code> <code class="cpp plain">main()</code></div><div class="line number84 index83 alt1"><code class="cpp plain">{</code></div><div class="line number85 index84 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">Matrix&lt;</code><code class="cpp color1 bold">int</code><code class="cpp plain">&gt; M(2,2);</code></div><div class="line number86 index85 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">M.data[0] = 1;M.data[1] = 1;</code></div><div class="line number87 index86 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">M.data[2] = 1;M.data[3] = 0;</code></div><div class="line number88 index87 alt1">&nbsp;</div><div class="line number89 index88 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp color1 bold">int</code> <code class="cpp plain">F[2]={0,1};</code></div><div class="line number90 index89 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp color1 bold">int</code> <code class="cpp plain">N;</code></div><div class="line number91 index90 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">while</code> <code class="cpp plain">(~</code><code class="cpp functions bold">scanf</code><code class="cpp plain">(</code><code class="cpp string">"%d"</code><code class="cpp plain">,&amp;N))</code></div><div class="line number92 index91 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">if</code> <code class="cpp plain">(N&gt;1)</code></div><div class="line number93 index92 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp functions bold">printf</code><code class="cpp plain">(</code><code class="cpp string">"%lld\n"</code><code class="cpp plain">,(M^N).data[0]);</code></div><div class="line number94 index93 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">else</code></div><div class="line number95 index94 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp functions bold">printf</code><code class="cpp plain">(</code><code class="cpp string">"%d\n"</code><code class="cpp plain">,F[N]);</code></div><div class="line number96 index95 alt1"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div>
+
+<div class="wpcnt">
+<div class="wpa">
+<a class="wpa-about" href="http://wordpress.com/about-these-ads/" rel="nofollow">About these ads</a>
+<script type="text/javascript">
+		var wpcom_adclk_hovering = false;
+		var wpcom_adclk_recorded = false;
+		var wpcom_adclk_theme = "The Journalist v1.9";
+		var wpcom_adclk_slot = "wpcom_below_post_adsafe";
+		var wpcom_adclk_network = ( typeof wpcom_adclk_network === "undefined" ) ? "" : wpcom_adclk_network ;
+
+		jQuery(document).ready( function() {
+			function wpcom_adclk_hover_yes() { wpcom_adclk_hovering = true; }
+			function wpcom_adclk_hover_no() { wpcom_adclk_hovering = false; }
+			jQuery(".wpa").click(wpcom_adclk_click);
+			jQuery(".wpa iframe").hover( wpcom_adclk_hover_yes, wpcom_adclk_hover_no );
+			jQuery(".wpa object").hover( wpcom_adclk_hover_yes, wpcom_adclk_hover_no );
+
+			jQuery(window).blur( function() {
+				if ( wpcom_adclk_hovering ) { wpcom_adclk_click(); }
+			});
+		});
+
+		function wpcom_adclk_impression() {
+			var stat_gif = document.location.protocol + "//pixel.wp.com/g.gif?v=wpcom-no-pv";
+			stat_gif += "&x_ads_imp_theme=" + wpcom_adclk_theme;
+			stat_gif += "&x_ads_imp_placement="+wpcom_adclk_slot;
+			stat_gif += "&x_ads_imp_network=" + wpcom_adclk_network;
+			stat_gif += "&x_ads_imp_theme_network="+wpcom_adclk_theme+"_"+wpcom_adclk_network;
+			new Image().src = stat_gif + "&baba=" + Math.random();
+			return true;
+		}
+
+		function wpcom_adclk_click() {
+			if (wpcom_adclk_recorded) { return true; } // no double counting
+			var stat_gif = document.location.protocol + "//pixel.wp.com/g.gif?v=wpcom-no-pv";
+			stat_gif += "&x_ads_click_theme=" + wpcom_adclk_theme;
+			stat_gif += "&x_ads_click_placement="+wpcom_adclk_slot;
+			stat_gif += "&x_ads_click_network=" + wpcom_adclk_network;
+			stat_gif += "&x_ads_click_theme_network="+wpcom_adclk_theme+"_"+wpcom_adclk_network;
+
+			new Image().src = stat_gif + "&baba=" + Math.random();
+			wpcom_adclk_recorded = true;
+			var now=new Date(); var end=now.getTime()+250;
+			while(true){now=new Date();if(now.getTime()>end){break;}}
+			return true;
+		}
+	
+if ( typeof GA_googleAddAttr == 'function' ) {
+GA_googleAddAttr("AdOpt", "1");
+GA_googleAddAttr("Origin", "extsearch");
+GA_googleAddAttr("LangId", "1");
+GA_googleAddAttr("Domain", "comeoncodeon.wordpress.com");
+GA_googleAddAttr("BlogId", "6510929");
+GA_googleAddAttr("PageURL", "http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/");
+GA_googleAddAttr("AdSafe", "1");
+GA_googleAddAttr("Autotag", "technology");
+GA_googleAddAttr("Tag", "programming");
+GA_googleAddAttr("Tag", "algorithm-2");
+GA_googleAddAttr("Tag", "code");
+GA_googleAddAttr("Tag", "complexity");
+GA_googleAddAttr("Tag", "divide-and-conquer");
+GA_googleAddAttr("Tag", "equation");
+GA_googleAddAttr("Tag", "exponentiation");
+GA_googleAddAttr("Tag", "fibonacci");
+GA_googleAddAttr("Tag", "matrix");
+GA_googleAddAttr("Tag", "recurrence");
+GA_googleAddAttr("Tag", "relation");
+GA_googleAddAttr("Tag", "time");
+GA_googleAddAttr("Partner", "AOL");
+GA_googleAddAttr("theme_bg", "ffffff");
+GA_googleAddAttr("theme_border", "f3f3f3");
+GA_googleAddAttr("theme_text", "1c1c1c");
+GA_googleAddAttr("theme_link", "004276");
+GA_googleAddAttr("theme_url", "cc0000");
+GA_googleAddAdSensePageAttr("google_page_url", "http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/");
+GA_googleFillSlot("wpcom_below_post_adsafe");
+}
+</script>
+</div>
+</div>
+
+<script type="text/javascript">
+jQuery( window ).load( function() {
+    if ( jQuery(".wpa script[src*='virool.com']").length > 0 || jQuery(".wpa script[src*='shareth.ru']").length > 0 || jQuery(".wpa iframe[src*='boomvideo.tv']").length > 0 || jQuery(".wpa iframe[src*='viewablemedia.net']").length > 0 || jQuery(".wpa .sharethrough-placement").length > 0 ) {
+        jQuery( '.wpa' ).css( 'width', '400px' );
+    }
+setTimeout(function(){if(typeof GS_googleAddAdSenseService !== 'function'){new Image().src=document.location.protocol+"//pixel.wp.com/g.gif?v=wpcom-no-pv&x_noads=adblock&baba="+Math.random()}},100);
+} );
+</script>
+
+<div id="jp-post-flair" class="sharedaddy sd-rating-enabled sd-like-enabled sd-sharing-enabled"><div class="sd-block sd-rating"><h3 class="sd-title">Rate this:</h3><div class="pd-rating" id="pd_rating_holder_381144_post_490" style="display: inline-block;"><div class="rating-icons" id="pd_rate_381144_post_490" style="float:left;"><div class="rating-nero-icon" onmouseout="PDRTJS_381144_post_490.rebuild();" onclick="PDRTJS_381144_post_490.rate(1);" onmouseover="PDRTJS_381144_post_490.hover(1);" id="PDRTJS_381144_post_490_nero_1" style="background-size: 32px 32px !important; cursor: pointer; width: 16px; height: 16px;  line-height: 16px; background: url(http://i0.poll.fm/images/ratings/nero-hand-sml.png) bottom left; float: left; padding: 0px; margin: 0px; margin: 0px;">&nbsp;</div><div class="rating-nero-value" id="PDRTJS_381144_post_490_msg_1" style="text-align: center; font:normal normal /16px ; color: #; float:left; padding: 0px 4px;">15</div><div class="rating-nero-icon" onmouseout="PDRTJS_381144_post_490.rebuild();" onclick="PDRTJS_381144_post_490.rate(2);" onmouseover="PDRTJS_381144_post_490.hover(2);" id="PDRTJS_381144_post_490_nero_2" style="background-size: 32px 32px !important; cursor: pointer; width: 16px; height: 16px;  line-height: 16px; background: url(http://i0.poll.fm/images/ratings/nero-hand-sml.png) bottom right; float: left; padding: 0px; margin: 0px; margin: 0px;">&nbsp;</div><div class="rating-nero-value" id="PDRTJS_381144_post_490_msg_2" style="text-align: center; font:normal normal /16px ; color: #; float:left; padding: 0px 4px;">0</div></div><span style="float:left;">&nbsp;</span><div id="rating_info_381144_post_490" style="display:block;float:left;background:url(http://i0.poll.fm/images/ratings/info.png) no-repeat 3px 2px;width:16px;height:16px;cursor:pointer; null " onclick="javascript:PDRTJS_381144_post_490.togglePopup();return false;"><span style="display:none;">i</span></div><div class="pd_popup_holder" id="pd_popup_holder_381144_post_490">&nbsp;</div><div class="rating-msg" id="PDRTJS_381144_post_490_msg" style="float:left; padding-left: 5px; text-align: left; font:normal normal /16px ; color: #;">Rate This</div><p style="padding: 0px; margin: 0px; clear: both;"></p></div></div><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-official sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-stumbleupon"><div class="stumbleupon_button"><iframe src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/saved_resource(7).htm" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:74px; height: 18px;" allowtransparency="true"></iframe></div></li><li class="share-facebook"><div class="like_button"><iframe src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/like.htm" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:96px; height:21px;" allowtransparency="true"></iframe></div></li><li class="share-print"><a rel="nofollow" class="share-print sd-button" href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#print" title="Click to print"><span>Print</span></a></li><li class="share-twitter"><div class="twitter_button"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/tweet_button.htm" style="width:101px; height:20px;"></iframe></div></li><li class="share-reddit"><div class="reddit_button"><iframe src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/button1.htm" height="22" width="120" scrolling="no" frameborder="0"></iframe></div></li><li class="share-email share-service-visible"><a rel="nofollow" class="share-email sd-button" href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/?share=email&nb=1" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-google-plus-1"><div class="googleplus1_button"><div id="___plus_0" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 84px; height: 20px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 84px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1413030631411" name="I0_1413030631411" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/sharebutton.htm" data-gapiattached="true" title="+Share"></iframe></div></div></li><li class="share-linkedin"><div class="linkedin_button"><span class="IN-widget" style="line-height: 1; vertical-align: baseline; display: inline-block; text-align: center;"><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span id="li_ui_li_gen_1413030632967_0"><a id="li_ui_li_gen_1413030632967_0-link" href="javascript:void(0);"><span id="li_ui_li_gen_1413030632967_0-logo">in</span><span id="li_ui_li_gen_1413030632967_0-title"><span id="li_ui_li_gen_1413030632967_0-mark"></span><span id="li_ui_li_gen_1413030632967_0-title-text">Share</span></span></a></span></span><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span id="li_ui_li_gen_1413030632982_1-container" class="IN-right IN-hidden"><span id="li_ui_li_gen_1413030632982_1" class="IN-right"><span id="li_ui_li_gen_1413030632982_1-inner" class="IN-right"><span id="li_ui_li_gen_1413030632982_1-content" class="IN-right">0</span></span></span></span></span></span><script type="in/share+init" data-url="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/" data-counter="right"></script></div></li><li class="share-tumblr"><a target="" href="http://www.tumblr.com/share/link/?url=http%3A%2F%2Fcomeoncodeon.wordpress.com%2F2011%2F05%2F08%2Frecurrence-relation-and-matrix-exponentiation%2F&name=Recurrence%20Relation%20and%20Matrix%20Exponentiation" title="Share on Tumblr" style="display:inline-block; text-indent:-9999px; overflow:hidden; width:62px; height:20px; background:url(&#39;//platform.tumblr.com/v1/share_2.png&#39;) top left no-repeat transparent;">Share on Tumblr</a></li><li class="share-pinterest"><div class="pinterest_button"><a data-pin-href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fcomeoncodeon.wordpress.com%2F2011%2F05%2F08%2Frecurrence-relation-and-matrix-exponentiation%2F&amp;description=Recurrence%20Relation%20and%20Matrix%20Exponentiation" data-pin-log="button_pinit_bookmarklet" class="PIN_1413030633612_pin_it_button_20 PIN_1413030633612_pin_it_button_en_20_gray PIN_1413030633612_pin_it_button_inline_20 PIN_1413030633612_pin_it_beside_20" data-pin-config="beside"><span class="PIN_1413030633612_hidden" id="PIN_1413030633612_pin_count_0"><i></i></span></a></div></li><li class="share-end"></li></ul></div></div></div><div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-loaded" id="like-post-wrapper-6510929-490-543922dd26b9f" data-src="//widgets.wp.com/likes/#blog_id=6510929&amp;post_id=490&amp;origin=comeoncodeon.wordpress.com&amp;obj_id=6510929-490-543922dd26b9f" data-name="like-post-frame-6510929-490-543922dd26b9f"><h3 class="sd-title">Like this:</h3><div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px; display: none;"><span class="button"><span>Like</span></span> <span class="loading">Loading...</span></div><iframe class="post-likes-widget jetpack-likes-widget" name="like-post-frame-6510929-490-543922dd26b9f" height="55px" width="100%" frameborder="0" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/saved_resource.htm"></iframe><span class="sd-text-color"></span><a class="sd-link-color"></a></div>
+<div id="jp-relatedposts" class="jp-relatedposts" style="display: block;">
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+<div class="jp-relatedposts-items jp-relatedposts-items-minimal"><p class="jp-relatedposts-post jp-relatedposts-post0" data-post-id="515" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="http://comeoncodeon.wordpress.com/2011/07/31/combination/" title="Combination
+
+In mathematics a combination is a way of selecting several things out of a larger group, where (unlike permutations) order does not matter. More formally a k-combination of a set&amp;hellip;" rel="nofollow" data-origin="490" data-position="0">Combination</a></span><span class="jp-relatedposts-post-context">In "Algorithm"</span></p><p class="jp-relatedposts-post jp-relatedposts-post1" data-post-id="438" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="http://comeoncodeon.wordpress.com/2010/06/07/number-of-cycles-in-a-graph/" title="Number of Cycles in a Graph
+
+Question : Find the number of simple cycles in a simple graph. Simple Graph - An undirected graph that has no loops and no more than one edge between any&amp;hellip;" rel="nofollow" data-origin="490" data-position="1">Number of Cycles in a&nbsp;Graph</a></span><span class="jp-relatedposts-post-context">In "Algorithm"</span></p><p class="jp-relatedposts-post jp-relatedposts-post2" data-post-id="331" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="http://comeoncodeon.wordpress.com/2009/07/21/counting-problem/" title="Counting Problems
+
+Problem 1: Given a set of n numbers ai sum up to M, and any K ≤ M, whether there is a subset of the numbers such that they sum&amp;hellip;" rel="nofollow" data-origin="490" data-position="2">Counting Problems</a></span><span class="jp-relatedposts-post-context">In "Programming"</span></p></div></div></div>			</div>
+
+	<div class="meta group">
+		<div class="signature">
+			<p>Written by fR0DDY <span class="edit"></span></p>
+			<p>May 8, 2011 at 5:26 PM</p>
+		</div>
+		<div class="tags">
+			<p>Posted in <a href="http://comeoncodeon.wordpress.com/category/programming/" rel="category tag">Programming</a></p>
+			<p>Tagged with <a href="http://comeoncodeon.wordpress.com/tag/algorithm-2/" rel="tag">algorithm</a>, <a href="http://comeoncodeon.wordpress.com/tag/code/" rel="tag">code</a>, <a href="http://comeoncodeon.wordpress.com/tag/complexity/" rel="tag">complexity</a>, <a href="http://comeoncodeon.wordpress.com/tag/divide-and-conquer/" rel="tag">divide-and-conquer</a>, <a href="http://comeoncodeon.wordpress.com/tag/equation/" rel="tag">equation</a>, <a href="http://comeoncodeon.wordpress.com/tag/exponentiation/" rel="tag">exponentiation</a>, <a href="http://comeoncodeon.wordpress.com/tag/fibonacci/" rel="tag">Fibonacci</a>, <a href="http://comeoncodeon.wordpress.com/tag/matrix/" rel="tag">matrix</a>, <a href="http://comeoncodeon.wordpress.com/tag/recurrence/" rel="tag">recurrence</a>, <a href="http://comeoncodeon.wordpress.com/tag/relation/" rel="tag">relation</a>, <a href="http://comeoncodeon.wordpress.com/tag/time/" rel="tag">time</a></p>		</div>
+	</div>
+</div>
+<div class="navigation group">
+	<div class="alignleft">« <a href="http://comeoncodeon.wordpress.com/2010/09/18/pollard-rho-brent-integer-factorization/" rel="prev">Pollard Rho Brent Integer&nbsp;Factorization</a></div>
+	<div class="alignright"><a href="http://comeoncodeon.wordpress.com/2011/07/31/combination/" rel="next">Combination</a> »</div>
+</div>
+
+
+<a name="comments" id="comments"></a>
+
+<h3 class="reply">13 Responses</h3>
+<p class="comment_meta">Subscribe to comments with <a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/feed/">RSS</a>.</p>
+
+<ol class="commentlist">
+<li id="comment-237" class="comment even thread-even depth-1  highlander-comment highlander-comment">
+	<div id="div-comment-237">
+	<div class="comment_mod">
+		</div>
+
+	<div class="comment_text">
+	<p>Nice job…well explained</p>
+	</div>
+
+	<div class="comment_author vcard">
+	<img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/88a5fd4b33274fcb50c7d183a327c85c" class="avatar avatar-32 grav-hashed grav-hijack hoverZoomLink" height="32" width="32" id="grav-88a5fd4b33274fcb50c7d183a327c85c-0">	<p><strong class="fn">Ranjan</strong></p>
+	<p><small>
+		May 18, 2011 at <a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#comment-237">12:53 PM</a>			</small></p>
+	</div>
+	<div class="clear"></div>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/?replytocom=237#respond" onclick="return addComment.moveForm(&quot;div-comment-237&quot;, &quot;237&quot;, &quot;respond&quot;, &quot;490&quot;)">Reply</a>	</div>
+	</div>
+</li><!-- #comment-## -->
+<li id="comment-241" class="comment odd alt thread-odd thread-alt depth-1  highlander-comment highlander-comment">
+	<div id="div-comment-241">
+	<div class="comment_mod">
+		</div>
+
+	<div class="comment_text">
+	<p>Good explanation. I have just learnt a new thing. An interesting one, indeed.</p>
+<p>Just a question. Can not the matrix exponentiation be done with the diagonalization method? It would be faster, although I am not very sure. I am a little sleepy right now.</p>
+	</div>
+
+	<div class="comment_author vcard">
+	<img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/14776da102709e4e3f9310b64c288146" class="avatar avatar-32 grav-hashed grav-hijack hoverZoomLink" height="32" width="32" id="grav-14776da102709e4e3f9310b64c288146-0">	<p><strong class="fn">Areku</strong></p>
+	<p><small>
+		May 22, 2011 at <a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#comment-241">3:53 AM</a>			</small></p>
+	</div>
+	<div class="clear"></div>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/?replytocom=241#respond" onclick="return addComment.moveForm(&quot;div-comment-241&quot;, &quot;241&quot;, &quot;respond&quot;, &quot;490&quot;)">Reply</a>	</div>
+	</div>
+</li><!-- #comment-## -->
+<li id="comment-246" class="comment even thread-even depth-1  highlander-comment highlander-comment">
+	<div id="div-comment-246">
+	<div class="comment_mod">
+		</div>
+
+	<div class="comment_text">
+	<p><i>Just a question. Can not the matrix exponentiation be done with the diagonalization method? It would be faster, although I am not very sure. I am a little sleepy right now.</i><br>
++1</p>
+	</div>
+
+	<div class="comment_author vcard">
+	<img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/907c8a22c2e6158652ca2896ec6bde2b" class="avatar avatar-32 grav-hashed grav-hijack hoverZoomLink" height="32" width="32" id="grav-907c8a22c2e6158652ca2896ec6bde2b-0">	<p><strong class="fn"><a href="http://cloadapps.eu/" rel="external nofollow" class="url">Jabez</a></strong></p>
+	<p><small>
+		June 5, 2011 at <a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#comment-246">1:43 AM</a>			</small></p>
+	</div>
+	<div class="clear"></div>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/?replytocom=246#respond" onclick="return addComment.moveForm(&quot;div-comment-246&quot;, &quot;246&quot;, &quot;respond&quot;, &quot;490&quot;)">Reply</a>	</div>
+	</div>
+</li><!-- #comment-## -->
+<li id="comment-256" class="comment byuser comment-author-gauravalgo odd alt thread-odd thread-alt depth-1  byuser comment-author-gauravalgo highlander-comment highlander-comment">
+	<div id="div-comment-256">
+	<div class="comment_mod">
+		</div>
+
+	<div class="comment_text">
+	<p>hi how your code is high lighted in the wordpress<br>
+can you please tell me up??<br>
+i am not getting plugin option also in my word press did you paid for this??</p>
+	</div>
+
+	<div class="comment_author vcard">
+	<img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/0e622fee83fcd04bac70653f6dfd508f" class="avatar avatar-32 grav-hashed grav-hijack hoverZoomLink" height="32" width="32" id="grav-0e622fee83fcd04bac70653f6dfd508f-0">	<p><strong class="fn"><a href="http://gauravalgo.wordpress.com/" rel="external nofollow" class="url">gauravalgo</a></strong></p>
+	<p><small>
+		June 17, 2011 at <a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#comment-256">5:33 PM</a>			</small></p>
+	</div>
+	<div class="clear"></div>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/?replytocom=256#respond" onclick="return addComment.moveForm(&quot;div-comment-256&quot;, &quot;256&quot;, &quot;respond&quot;, &quot;490&quot;)">Reply</a>	</div>
+	</div>
+<ul class="children">
+<li id="comment-257" class="comment byuser comment-author-fr0d bypostauthor even depth-2  byuser comment-author-fr0d bypostauthor highlander-comment highlander-comment">
+	<div id="div-comment-257">
+	<div class="comment_mod">
+		</div>
+
+	<div class="comment_text">
+	<p>You do not need any plugins to do that. Just have a look at the support section. More precisely <a href="http://en.support.wordpress.com/code/" rel="nofollow">http://en.support.wordpress.com/code/</a> for code syntax highlighter and <a href="http://en.support.wordpress.com/latex/" rel="nofollow">http://en.support.wordpress.com/latex/</a> for latex.</p>
+	</div>
+
+	<div class="comment_author vcard">
+	<img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/60401b326632d9f7def9f258670961b4" class="avatar avatar-32 grav-hashed grav-hijack hoverZoomLink" height="32" width="32" id="grav-60401b326632d9f7def9f258670961b4-0">	<p><strong class="fn">fR0DDY</strong></p>
+	<p><small>
+		June 17, 2011 at <a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#comment-257">9:26 PM</a>			</small></p>
+	</div>
+	<div class="clear"></div>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/?replytocom=257#respond" onclick="return addComment.moveForm(&quot;div-comment-257&quot;, &quot;257&quot;, &quot;respond&quot;, &quot;490&quot;)">Reply</a>	</div>
+	</div>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li id="comment-266" class="pingback odd alt thread-even depth-1 pingback highlander-comment highlander-comment">
+	<div id="div-comment-266">
+	<div class="comment_mod">
+		</div>
+
+	<div class="comment_text">
+	<p>[...] Using Matrix Multiplication In the last post we learned how to use Fast Matrix Multiplication to calculate functions having linear equations in [...]</p>
+	</div>
+
+	<div class="comment_author vcard">
+		<p><strong class="fn"><a href="http://comeoncodeon.wordpress.com/2011/07/31/combination/" rel="external nofollow" class="url">Combination « COME ON CODE ON</a></strong></p>
+	<p><small>
+		July 31, 2011 at <a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#comment-266">8:43 PM</a>			</small></p>
+	</div>
+	<div class="clear"></div>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/?replytocom=266#respond" onclick="return addComment.moveForm(&quot;div-comment-266&quot;, &quot;266&quot;, &quot;respond&quot;, &quot;490&quot;)">Reply</a>	</div>
+	</div>
+</li><!-- #comment-## -->
+<li id="comment-274" class="comment byuser comment-author-gauravalgo even thread-odd thread-alt depth-1  byuser comment-author-gauravalgo highlander-comment highlander-comment">
+	<div id="div-comment-274">
+	<div class="comment_mod">
+		</div>
+
+	<div class="comment_text">
+	<p>i want to know that can Determinant of matrix be find out  without using any floating point operations.</p>
+	</div>
+
+	<div class="comment_author vcard">
+	<img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/0e622fee83fcd04bac70653f6dfd508f" class="avatar avatar-32 grav-hashed grav-hijack hoverZoomLink" height="32" width="32" id="grav-0e622fee83fcd04bac70653f6dfd508f-1">	<p><strong class="fn"><a href="http://gauravalgo.wordpress.com/" rel="external nofollow" class="url">gauravalgo</a></strong></p>
+	<p><small>
+		August 16, 2011 at <a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#comment-274">3:59 PM</a>			</small></p>
+	</div>
+	<div class="clear"></div>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/?replytocom=274#respond" onclick="return addComment.moveForm(&quot;div-comment-274&quot;, &quot;274&quot;, &quot;respond&quot;, &quot;490&quot;)">Reply</a>	</div>
+	</div>
+</li><!-- #comment-## -->
+<li id="comment-283" class="comment byuser comment-author-gauravalgo odd alt thread-even depth-1  byuser comment-author-gauravalgo highlander-comment highlander-comment">
+	<div id="div-comment-283">
+	<div class="comment_mod">
+		</div>
+
+	<div class="comment_text">
+	<p>your code in pyton and simple c is better in understanding(also many coders understand like me) than c++ template so please make your write ups in these languages</p>
+	</div>
+
+	<div class="comment_author vcard">
+	<img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/0e622fee83fcd04bac70653f6dfd508f" class="avatar avatar-32 grav-hashed grav-hijack hoverZoomLink" height="32" width="32" id="grav-0e622fee83fcd04bac70653f6dfd508f-2">	<p><strong class="fn"><a href="http://gauravalgo.wordpress.com/" rel="external nofollow" class="url">gauravalgo</a></strong></p>
+	<p><small>
+		August 27, 2011 at <a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#comment-283">10:09 PM</a>			</small></p>
+	</div>
+	<div class="clear"></div>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/?replytocom=283#respond" onclick="return addComment.moveForm(&quot;div-comment-283&quot;, &quot;283&quot;, &quot;respond&quot;, &quot;490&quot;)">Reply</a>	</div>
+	</div>
+</li><!-- #comment-## -->
+<li id="comment-286" class="comment byuser comment-author-gauravalgo even thread-odd thread-alt depth-1  byuser comment-author-gauravalgo highlander-comment highlander-comment">
+	<div id="div-comment-286">
+	<div class="comment_mod">
+		</div>
+
+	<div class="comment_text">
+	<p>i want to ask at your 2 nd point of this article<br>
+“2. For recurrence relation f(n) = a*f(n-1) + b*f(n-2) + c*f(n-3)”<br>
+how do we calculate a,b,c by applying (subset sum algorithm) or by some else how?</p>
+<p>and second thing that your code in c++ template so may be<br>
+cannot undestand by many users so i have this techical writing for those </p>
+<p><a href="http://algosolver.blogspot.com/2011/09/fibonacci-log-n.html" rel="nofollow">http://algosolver.blogspot.com/2011/09/fibonacci-log-n.html</a></p>
+<p>enjoy ; )</p>
+	</div>
+
+	<div class="comment_author vcard">
+	<img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/0e622fee83fcd04bac70653f6dfd508f" class="avatar avatar-32 grav-hashed grav-hijack hoverZoomLink" height="32" width="32" id="grav-0e622fee83fcd04bac70653f6dfd508f-3">	<p><strong class="fn"><a href="http://gauravalgo.wordpress.com/" rel="external nofollow" class="url">gauravalgo</a></strong></p>
+	<p><small>
+		September 1, 2011 at <a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#comment-286">6:00 PM</a>			</small></p>
+	</div>
+	<div class="clear"></div>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/?replytocom=286#respond" onclick="return addComment.moveForm(&quot;div-comment-286&quot;, &quot;286&quot;, &quot;respond&quot;, &quot;490&quot;)">Reply</a>	</div>
+	</div>
+</li><!-- #comment-## -->
+<li id="comment-317" class="comment odd alt thread-even depth-1  highlander-comment highlander-comment">
+	<div id="div-comment-317">
+	<div class="comment_mod">
+		</div>
+
+	<div class="comment_text">
+	<p>The first K terms of the sequence F(0), F(1), F(2), … , F(K-1) are given and the recurrence is, F(n) = F(n-1) + F(n-2) + … + F(n-K) for n &gt;= K. Given N, find the value of F(N).</p>
+	</div>
+
+	<div class="comment_author vcard">
+	<img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/d42495816a6a1ee639e383fa9bb5786a" class="avatar avatar-32 grav-hashed grav-hijack hoverZoomLink" height="32" width="32" id="grav-d42495816a6a1ee639e383fa9bb5786a-0">	<p><strong class="fn"><a href="http://nz.cn%2Cz%2Ccmzx%2C%2Cxz%2Cmzx/" rel="external nofollow" class="url">vcfvamcvmc</a></strong></p>
+	<p><small>
+		October 27, 2011 at <a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#comment-317">2:29 AM</a>			</small></p>
+	</div>
+	<div class="clear"></div>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/?replytocom=317#respond" onclick="return addComment.moveForm(&quot;div-comment-317&quot;, &quot;317&quot;, &quot;respond&quot;, &quot;490&quot;)">Reply</a>	</div>
+	</div>
+</li><!-- #comment-## -->
+<li id="comment-375" class="comment even thread-odd thread-alt depth-1  highlander-comment highlander-comment">
+	<div id="div-comment-375">
+	<div class="comment_mod">
+		</div>
+
+	<div class="comment_text">
+	<p>@fRODDY….i din understand how u’ve written x_i+1 matrix as g_n+1,g_n,f_n+2,f_n+1 ???why isn’t it f_n+1,f_n????please clarify???how can we deduce the no of elements in the k*1 matrix if reccurences like this are given????</p>
+	</div>
+
+	<div class="comment_author vcard">
+	<img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/114fa5de9897f4be46d8ff7e45e580d9" class="avatar avatar-32 grav-hashed grav-hijack hoverZoomLink" height="32" width="32" id="grav-114fa5de9897f4be46d8ff7e45e580d9-0">	<p><strong class="fn">Lalit</strong></p>
+	<p><small>
+		May 16, 2012 at <a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#comment-375">2:02 PM</a>			</small></p>
+	</div>
+	<div class="clear"></div>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/?replytocom=375#respond" onclick="return addComment.moveForm(&quot;div-comment-375&quot;, &quot;375&quot;, &quot;respond&quot;, &quot;490&quot;)">Reply</a>	</div>
+	</div>
+</li><!-- #comment-## -->
+<li id="comment-392" class="comment odd alt thread-even depth-1  highlander-comment highlander-comment">
+	<div id="div-comment-392">
+	<div class="comment_mod">
+		</div>
+
+	<div class="comment_text">
+	<p>Can we calculate this recurrence equation using matrix ????<br>
+f(n)=f(n-1)+f(n-2)-2^n<br>
+if yes then how to calculate????please help</p>
+	</div>
+
+	<div class="comment_author vcard">
+	<img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/picture" class="avatar avatar-32" height="32" width="32">	<p><strong class="fn"><a href="http://www.facebook.com/nafis.islam.752" rel="external nofollow" class="url">Nafis Islam</a></strong></p>
+	<p><small>
+		September 10, 2012 at <a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#comment-392">1:40 AM</a>			</small></p>
+	</div>
+	<div class="clear"></div>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/?replytocom=392#respond" onclick="return addComment.moveForm(&quot;div-comment-392&quot;, &quot;392&quot;, &quot;respond&quot;, &quot;490&quot;)">Reply</a>	</div>
+	</div>
+</li><!-- #comment-## -->
+<li id="comment-462" class="comment even thread-odd thread-alt depth-1  highlander-comment highlander-comment">
+	<div id="div-comment-462">
+	<div class="comment_mod">
+		</div>
+
+	<div class="comment_text">
+	<p>Can anyone tell me how the matrix turns out to be {2,2,1,0} for f(n) = f(n-1)+4f(n-2)+2f(n-3) in the below link?</p>
+<p><a href="http://www.codechef.com/viewsolution/547362" rel="nofollow">http://www.codechef.com/viewsolution/547362</a></p>
+	</div>
+
+	<div class="comment_author vcard">
+	<img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/1084bd24fd2c4cc720252e1bdb0bb78c" class="avatar avatar-32 grav-hashed grav-hijack hoverZoomLink" height="32" width="32" id="grav-1084bd24fd2c4cc720252e1bdb0bb78c-0">	<p><strong class="fn">unknown</strong></p>
+	<p><small>
+		July 15, 2013 at <a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#comment-462">10:52 PM</a>			</small></p>
+	</div>
+	<div class="clear"></div>
+
+	<div class="reply">
+		<a class="comment-reply-link" href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/?replytocom=462#respond" onclick="return addComment.moveForm(&quot;div-comment-462&quot;, &quot;462&quot;, &quot;respond&quot;, &quot;490&quot;)">Reply</a>	</div>
+	</div>
+</li><!-- #comment-## -->
+</ol>
+<div class="navigation">
+	<div class="alignleft"></div>
+	<div class="alignright"></div>
+</div>
+<br>
+
+	
+
+
+								<div id="respond" class="comment-respond js">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://comeoncodeon.wordpress.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																										
+
+
+												<input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="d7e3b681b3"><input type="hidden" name="_wp_http_referer" value="/2011/05/08/recurrence-relation-and-matrix-exponentiation/">
+<input type="hidden" name="hc_post_as" id="hc_post_as" value="guest">
+
+<div class="comment-form-field comment-textarea">
+	
+	<div id="comment-form-comment"><textarea tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px; padding: 0px; box-sizing: content-box; word-wrap: break-word; overflow: hidden; -webkit-transition: none; transition: none; height: 0px !important; min-height: 0px !important; font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; text-decoration: none; word-spacing: 0px; text-indent: 0px; line-height: normal; width: 678px;" class="autosizejs "></textarea><textarea id="comment" name="comment" title="Enter your comment here..." placeholder="Enter your comment here..." style="height: 36px; overflow: hidden; word-wrap: break-word; resize: horizontal;"></textarea></div>
+</div>
+
+<div id="comment-form-identity" style="display: none;">
+
+	<div id="comment-form-nascar">
+		<p>Fill in your details below or click an icon to log in:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#comment-form-guest" id="postas-guest" title="Guest">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#comment-form-load-service:WordPress.com" id="postas-wordpress" title="WordPress.com">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#comment-form-load-service:Twitter" id="postas-twitter" title="Twitter">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#comment-form-load-service:Facebook" id="postas-facebook" title="Facebook">
+					<span></span>
+				</a>
+			</li>
+			<li>
+			<iframe id="googleplus-sign-in" name="googleplus-sign-in" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/saved_resource(8).htm" width="24" height="24" scrolling="no" allowtransparency="true" seamless="seamless" frameborder="0"></iframe>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/ad516503a11cd5ca435acc9bb6523536" alt="Gravatar" width="25" class="no-grav hoverZoomLink">
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Email <span class="required">(required)</span> <span class="nopublish">(Address never made public)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Name <span class="required">(required)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Website</label>
+					<div class="comment-form-input"><input id="url" name="url" type="text" value=""></div>
+				</div>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/wplogo.png" alt="WordPress.com Logo" width="25" class="no-grav">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="">
+				<p class="comment-form-posting-as pa-wordpress"><strong></strong> You are commenting using your WordPress.com account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'wordpress' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/ad516503a11cd5ca435acc9bb6523536" alt="Twitter picture" width="25" class="no-grav hoverZoomLink">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="">
+				<p class="comment-form-posting-as pa-twitter"><strong></strong> You are commenting using your Twitter account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'twitter' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/ad516503a11cd5ca435acc9bb6523536" alt="Facebook photo" width="25" class="no-grav hoverZoomLink">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="">
+				<p class="comment-form-posting-as pa-facebook"><strong></strong> You are commenting using your Facebook account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'facebook' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/ad516503a11cd5ca435acc9bb6523536" alt="Google+ photo" width="25" class="no-grav hoverZoomLink">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="">
+				<p class="comment-form-posting-as pa-googleplus"><strong></strong> You are commenting using your Google+ account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'googleplus' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Cancel</a></div>
+		<p>Connecting to %s</p>
+	</div>
+
+	
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe" style="display: none;">
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" tabindex="6"> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notify me of new comments via email.</label></p></div>
+
+												<p class="form-submit" style="display: none;">
+							<input name="submit" type="submit" id="comment-submit" value="Post Comment">
+							<input type="hidden" name="comment_post_ID" value="490" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="41d3d688f0"></p>
+<input type="hidden" name="genseq" value="1413030621">
+<p style="display: none;"></p>					<input type="hidden" id="ak_js" name="ak_js" value="1413030631376"></form>
+							</div><!-- #respond -->
+			<div style="clear: both"></div>
+
+
+</div>
+
+<div id="sidebar">
+<h3>I am</h3><p><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/60401b326632d9f7def9f258670961b4(1)" class="avatar avatar-128 grav-widget-center grav-hashed grav-hijack hoverZoomLink" height="128" width="128" style="display: block; margin: 0 auto;" id="grav-60401b326632d9f7def9f258670961b4-1"><br>A graduate from Institute of Technology,BHU. Coding, maths, number theory, oeis, music, reality shows, cs1.6 and sleeping, that pretty much sums up my life :)</p>
+<h3>Project Euler</h3>			<div class="textwidget"><img src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/fR0DDY.png" alt="Project Euler Profile" title="Project Euler Profile"></div>
+		<form role="search" method="get" id="searchform" class="searchform" action="http://comeoncodeon.wordpress.com/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s">
+					<input type="submit" id="searchsubmit" value="Search">
+				</div>
+			</form><h3><label for="subscribe-field">Email Subscription</label></h3>
+				<form action="https://subscribe.wordpress.com/" method="post" accept-charset="utf-8" id="subscribe-blog">
+											<p>Enter your email address to subscribe to this blog and receive notifications of new posts by email.</p>
+<p>Join 249 other followers</p>
+						<p><input type="text" name="email" style="width: 95%; padding: 1px 2px" placeholder="Enter your email address" value="" id="subscribe-field"></p>
+					
+					<p>
+						<input type="hidden" name="action" value="subscribe">
+						<input type="hidden" name="blog_id" value="6510929">
+						<input type="hidden" name="source" value="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/">
+						<input type="hidden" name="sub-type" value="widget">
+						<input type="hidden" name="redirect_fragment" value="blog_subscription-3">
+						<input type="hidden" id="_wpnonce" name="_wpnonce" value="af186b4373">						<input type="submit" value="Sign me up!">
+					</p>
+				</form>
+			
+<h3>Archives</h3>		<select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+			<option value="">Select Month</option>
+
+				<option value="http://comeoncodeon.wordpress.com/2011/10/"> October 2011 &nbsp;(1)</option>
+	<option value="http://comeoncodeon.wordpress.com/2011/07/"> July 2011 &nbsp;(1)</option>
+	<option value="http://comeoncodeon.wordpress.com/2011/05/"> May 2011 &nbsp;(1)</option>
+	<option value="http://comeoncodeon.wordpress.com/2010/09/"> September 2010 &nbsp;(2)</option>
+	<option value="http://comeoncodeon.wordpress.com/2010/08/"> August 2010 &nbsp;(3)</option>
+	<option value="http://comeoncodeon.wordpress.com/2010/06/"> June 2010 &nbsp;(2)</option>
+	<option value="http://comeoncodeon.wordpress.com/2010/04/"> April 2010 &nbsp;(2)</option>
+	<option value="http://comeoncodeon.wordpress.com/2010/02/"> February 2010 &nbsp;(2)</option>
+	<option value="http://comeoncodeon.wordpress.com/2009/11/"> November 2009 &nbsp;(1)</option>
+	<option value="http://comeoncodeon.wordpress.com/2009/09/"> September 2009 &nbsp;(3)</option>
+	<option value="http://comeoncodeon.wordpress.com/2009/08/"> August 2009 &nbsp;(3)</option>
+	<option value="http://comeoncodeon.wordpress.com/2009/07/"> July 2009 &nbsp;(2)</option>
+	<option value="http://comeoncodeon.wordpress.com/2009/06/"> June 2009 &nbsp;(2)</option>
+	<option value="http://comeoncodeon.wordpress.com/2009/04/"> April 2009 &nbsp;(6)</option>
+	<option value="http://comeoncodeon.wordpress.com/2009/03/"> March 2009 &nbsp;(5)</option>
+	<option value="http://comeoncodeon.wordpress.com/2009/02/"> February 2009 &nbsp;(14)</option>
+		</select>
+<h3>Categories</h3>		<ul>
+	<li class="cat-item cat-item-18127"><a href="http://comeoncodeon.wordpress.com/category/algorithm/">Algorithm</a> (13)
+</li>
+	<li class="cat-item cat-item-16654222"><a href="http://comeoncodeon.wordpress.com/category/beautiful-codes/">Beautiful Codes</a> (9)
+</li>
+	<li class="cat-item cat-item-35184"><a href="http://comeoncodeon.wordpress.com/category/maths/">Maths</a> (13)
+</li>
+	<li class="cat-item cat-item-196"><a href="http://comeoncodeon.wordpress.com/category/programming/">Programming</a> (36)
+</li>
+	<li class="cat-item cat-item-1"><a href="http://comeoncodeon.wordpress.com/category/uncategorized/">Uncategorized</a> (3)
+</li>
+		</ul>
+<h3>Good Programming Sites</h3>
+	<ul class="xoxo blogroll">
+<li><a href="http://fr0ddy.github.io/cs/online-judge-hints.html#/" title="Hints for online judge problems I have solved.">Online Judge Hints</a></li>
+<li><a href="http://projecteuler.net/" title="Project Euler is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve.">Project Euler</a></li>
+<li><a href="http://www.spoj.pl/" title="An online judge system which support for more than 30 programming languages and compilers, including C, C++, Pascal, JAVA, C#, Perl, Python, Ruby, Haskell, Ocaml, and esoteric languages.">SPOJ</a></li>
+<li><a href="https://www.topcoder.com/tc" title="A programming site which lets you earn money through intensive SRM’s (Single Round Matches) and Marathan Matches.">TopCoder</a></li>
+<li><a href="http://uva.onlinejudge.org/" title="Online Judge on the lines of ACM ICPC.">UVA Online Judge</a></li>
+<li><a href="http://www.codeforces.com/" target="_blank">Codeforces</a></li>
+<li><a href="http://www.codechef.com/">CodeChef</a></li>
+
+	</ul>
+
+<h3>Top Posts</h3><ul><li><a href="http://comeoncodeon.wordpress.com/2011/10/09/modular-multiplicative-inverse/" class="bump-view" data-bump-view="tp">Modular Multiplicative Inverse</a></li>
+<li><a href="http://comeoncodeon.wordpress.com/2010/09/18/pollard-rho-brent-integer-factorization/" class="bump-view" data-bump-view="tp">Pollard Rho Brent Integer Factorization</a></li>
+<li><a href="http://comeoncodeon.wordpress.com/2009/08/07/longest-common-subsequence-lcs/" class="bump-view" data-bump-view="tp">Longest Common Subsequence (LCS)</a></li>
+<li><a href="http://comeoncodeon.wordpress.com/2009/09/15/segment-trees/" class="bump-view" data-bump-view="tp">Segment Trees</a></li>
+<li><a href="http://comeoncodeon.wordpress.com/2010/04/08/multiply-two-numbers-without-using-operator/" class="bump-view" data-bump-view="tp">Multiply two Numbers Without Using * Operator </a></li>
+</ul><h3>Blog Stats</h3>		<ul>
+			<li>233,974 Hits</li>
+		</ul>
+		<h3>Calendar</h3><div id="calendar_wrap"><table id="wp-calendar">
+	<caption>May 2011</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+		<th scope="col" title="Sunday">S</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="http://comeoncodeon.wordpress.com/2010/09/">« Sep</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next"><a href="http://comeoncodeon.wordpress.com/2011/07/">Jul »</a></td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="6" class="pad">&nbsp;</td><td>1</td>
+	</tr>
+	<tr>
+		<td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td><a href="http://comeoncodeon.wordpress.com/2011/05/08/" title="Recurrence Relation and Matrix Exponentiation">8</a></td>
+	</tr>
+	<tr>
+		<td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td>
+	</tr>
+	<tr>
+		<td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td>
+	</tr>
+	<tr>
+		<td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td>
+	</tr>
+	<tr>
+		<td>30</td><td>31</td>
+		<td class="pad" colspan="5">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div><h3>Recent Comments</h3>				<table class="recentcommentsavatar" cellspacing="0" cellpadding="0" border="0">
+					<tbody><tr><td title="fR0DDY" class="recentcommentsavatartop" style="height:48px; width:48px;"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/60401b326632d9f7def9f258670961b4(2)" class="avatar avatar-48 grav-hashed grav-hijack hoverZoomLink" height="48" width="48" id="grav-60401b326632d9f7def9f258670961b4-2"></td><td class="recentcommentstexttop" style="">fR0DDY on <a href="http://comeoncodeon.wordpress.com/2011/10/09/modular-multiplicative-inverse/#comment-648">Modular Multiplicative Inverse</a></td></tr><tr><td title="hemanth" class="recentcommentsavatarend" style="height:48px; width:48px;"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/a9479d6358887d9387d6c04bae765a01" class="avatar avatar-48 grav-hashed grav-hijack hoverZoomLink" height="48" width="48" id="grav-a9479d6358887d9387d6c04bae765a01-0"></td><td class="recentcommentstextend" style="">hemanth on <a href="http://comeoncodeon.wordpress.com/2011/10/09/modular-multiplicative-inverse/#comment-647">Modular Multiplicative Inverse</a></td></tr><tr><td title="Dhruv" class="recentcommentsavatarend" style="height:48px; width:48px;"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/1e88b3e460895dfb25337f6140e39b2c" class="avatar avatar-48 grav-hashed grav-hijack hoverZoomLink" height="48" width="48" id="grav-1e88b3e460895dfb25337f6140e39b2c-0"></td><td class="recentcommentstextend" style="">Dhruv on <a href="http://comeoncodeon.wordpress.com/2011/10/09/modular-multiplicative-inverse/#comment-593">Modular Multiplicative Inverse</a></td></tr><tr><td title="fR0DDY" class="recentcommentsavatarend" style="height:48px; width:48px;"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/60401b326632d9f7def9f258670961b4(2)" class="avatar avatar-48 grav-hashed grav-hijack hoverZoomLink" height="48" width="48" id="grav-60401b326632d9f7def9f258670961b4-3"></td><td class="recentcommentstextend" style="">fR0DDY on <a href="http://comeoncodeon.wordpress.com/2011/10/09/modular-multiplicative-inverse/#comment-592">Modular Multiplicative Inverse</a></td></tr><tr><td title="Dhruv" class="recentcommentsavatarend" style="height:48px; width:48px;"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/1e88b3e460895dfb25337f6140e39b2c" class="avatar avatar-48 grav-hashed grav-hijack hoverZoomLink" height="48" width="48" id="grav-1e88b3e460895dfb25337f6140e39b2c-1"></td><td class="recentcommentstextend" style="">Dhruv on <a href="http://comeoncodeon.wordpress.com/2011/10/09/modular-multiplicative-inverse/#comment-590">Modular Multiplicative Inverse</a></td></tr>				</tbody></table>
+				<h3><a href="http://twitter.com/fR0DDY">My Tweets</a></h3><p>Error: Twitter did not respond. Please wait a few minutes and refresh this page.</p><h3>Visitors Location</h3>			<div class="textwidget"><a href="http://www3.clustrmaps.com/counter/maps.php?url=http://comeoncodeon.wordpress.com" id="clustrMapsLink"><img src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/index2.php" style="border:0;" alt="Locations of visitors to this page" title="Locations of visitors to this page">
+</a></div>
+		<h3>RSS Feeds</h3><p class="size-small"><a class="feed-image-link" href="http://comeoncodeon.wordpress.com/feed/" title="Subscribe to Posts"><img src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/red-small.png" alt="RSS Feed"></a>&nbsp;<a href="http://comeoncodeon.wordpress.com/feed/" title="Subscribe to Posts">RSS - Posts</a></p>
+<h3>Community</h3><div class="widgets-multi-column-grid"><ul><li><a href=""><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/710d8284504f28b986110196fe0c68f3" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-710d8284504f28b986110196fe0c68f3-0"></a></li><li><a href=""><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/869d3a9418514f347af0bcb811cfa258" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-869d3a9418514f347af0bcb811cfa258-0"></a></li><li><a href="http://modeldrivenarchitect.wordpress.com/"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/9e22fed017c68627cd3f75a9f0558940" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-9e22fed017c68627cd3f75a9f0558940-0"></a></li><li><a href=""><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/0f858e898cde36403421e6439b71c17e" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-0f858e898cde36403421e6439b71c17e-0"></a></li><li><a href="http://gravatar.com/shrayasr"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/04916cffc8dea77475189ac7ed480420" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-04916cffc8dea77475189ac7ed480420-0"></a></li><li><a href="http://about.me/bit_cracker007"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/75f99ef88c4eb2e5254835b5a5debe92" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-75f99ef88c4eb2e5254835b5a5debe92-0"></a></li><li><a href="http://whataakashthinks.wordpress.com/"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/463027be02f18caffa596ed4f85e35fe" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-463027be02f18caffa596ed4f85e35fe-0"></a></li><li><a href="http://phoxis.org/"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/e2a400cef6dbb94a8777c161d5b43d0c" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-e2a400cef6dbb94a8777c161d5b43d0c-0"></a></li><li><a href="http://www.facebook.com/profile.php?id=100004058283119"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/picture(1)" class="avatar avatar-240" height="48" width="48" originals="240" scale="1"></a></li><li><a href="http://juxtaposeduniverse.wordpress.com/"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/1afcd52dc4eae87efbe408a1ec498fc4" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-1afcd52dc4eae87efbe408a1ec498fc4-0"></a></li><li><a href="http://hi.baidu.com/s_wanfu/item/00cd4d3c5a2fd089f5e4ad0a"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/9bb801e3ebc8e4bf4715ab402b1c8b78" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-9bb801e3ebc8e4bf4715ab402b1c8b78-0"></a></li><li><a href="http://twitter.com/jatinshridhar"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/p5559wkpya5wsmm4eww0_normal.jpeg" class="avatar avatar-240" height="48" width="48" originals="240" scale="1"></a></li><li><a href="http://algorists.wordpress.com/"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/66cc4e0399ad387f655f6b100d31e990" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-66cc4e0399ad387f655f6b100d31e990-0"></a></li><li><a href="http://freshwatersjmi.wordpress.com/"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/d0c10abdb4542936e8080018f3731f8e" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-d0c10abdb4542936e8080018f3731f8e-0"></a></li><li><a href="http://twitter.com/rishabhnigam31"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/02ff15a82b353887ae22a938e463b476_normal.jpeg" class="avatar avatar-240" height="48" width="48" originals="240" scale="1"></a></li><li><a href=""><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/83c216b61fa88bb174c1775a249a4599" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-83c216b61fa88bb174c1775a249a4599-0"></a></li><li><a href="http://gmkrishna5.wordpress.com/"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/61444efeb88b196799ccadf03cab7873" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-61444efeb88b196799ccadf03cab7873-0"></a></li><li><a href="http://thenullspace.wordpress.com/"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/8e623e3d178746197d3de47e02f2be97" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-8e623e3d178746197d3de47e02f2be97-0"></a></li><li><a href="http://ravishankarkumar.wordpress.com/"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/ba8a6c04a33399a1f6198d57367f8482" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-ba8a6c04a33399a1f6198d57367f8482-0"></a></li><li><a href="http://imranshabijabi.wordpress.com/"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/a28a4d282455c1c0e27a40a2f91901e0" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-a28a4d282455c1c0e27a40a2f91901e0-0"></a></li><li><a href="http://thiagowfx.github.io/"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/36585cfbae3227d32d39303166bfcde7" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-36585cfbae3227d32d39303166bfcde7-0"></a></li><li><a href=""><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/ef5688a00973a66819865f461858051a" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-ef5688a00973a66819865f461858051a-0"></a></li><li><a href="http://lyked.wordpress.com/"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/948af8f0495d03e4e5add14875f66c90" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-948af8f0495d03e4e5add14875f66c90-0"></a></li><li><a href="http://aqfaridi.wordpress.com/"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/aafaa8822c1eb7bfc68c47e50f83ad62" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-aafaa8822c1eb7bfc68c47e50f83ad62-0"></a></li><li><a href="http://rookieslab.com/"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/c4e18e13f6e0292fd338a8b6437ea722" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-c4e18e13f6e0292fd338a8b6437ea722-0"></a></li><li><a href="http://scenefromamemory.wordpress.com/"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/71c5e2d5355333933e75a5c71823fcda" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-71c5e2d5355333933e75a5c71823fcda-0"></a></li><li><a href="https://www.facebook.com/MYlifeBElikeOOHaahh"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/picture(2)" class="avatar avatar-240" height="48" width="48" originals="240" scale="1"></a></li><li><a href="http://gravatar.com/aaadith"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/ae31d873baa28b99edc63f653ee9d940" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-ae31d873baa28b99edc63f653ee9d940-0"></a></li><li><a href=""><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/d533606827c33c47b266efad9faa6556" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-d533606827c33c47b266efad9faa6556-0"></a></li><li><a href=""><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/c08f6e0d6e755f07fddb33196beb6e4c" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-c08f6e0d6e755f07fddb33196beb6e4c-0"></a></li><li><a href=""><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/60401b326632d9f7def9f258670961b4(2)" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-60401b326632d9f7def9f258670961b4-4"></a></li><li><a href="http://codecompiler.wordpress.com/"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/b2d8449ca24e1dac8423a6a38d4f7737" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-b2d8449ca24e1dac8423a6a38d4f7737-0"></a></li><li><a href=""><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/067907fd98ea6bf247c22839604226e6" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-067907fd98ea6bf247c22839604226e6-0"></a></li><li><a href="http://ayushsharma1617.wordpress.com/"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/83e159846da18920e2ff9ecf8028e9e2" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-83e159846da18920e2ff9ecf8028e9e2-0"></a></li><li><a href=""><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/7d4392d66a40de8efe136cdb968052b9" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-7d4392d66a40de8efe136cdb968052b9-0"></a></li><li><a href=""><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/bea16a43135841b30aa56d1bd0747af4" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-bea16a43135841b30aa56d1bd0747af4-0"></a></li><li><a href=""><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/9b38752798e9a430fc669fb1943c6152" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-9b38752798e9a430fc669fb1943c6152-0"></a></li><li><a href="http://diljitpr.wordpress.com/"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/bf31372e42b6c94b5f076a9bb6817d28" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-bf31372e42b6c94b5f076a9bb6817d28-0"></a></li><li><a href="http://gagangupt16.wordpress.com/"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/e3b7dbcd583d63a671865713304ca7f4" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-e3b7dbcd583d63a671865713304ca7f4-0"></a></li><li><a href=""><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/95214520242dcd0e3b35923d26cb5d99" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-95214520242dcd0e3b35923d26cb5d99-0"></a></li><li><a href=""><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/806702ef8cc890816e60bc42c292580d" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-806702ef8cc890816e60bc42c292580d-0"></a></li><li><a href="http://kanansa.wordpress.com/"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/84bfb21187f738bc4d0deca14cb8cec0" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-84bfb21187f738bc4d0deca14cb8cec0-0"></a></li><li><a href="https://www.facebook.com/ducphanduy.agentp"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/picture(3)" class="avatar avatar-240" height="48" width="48" originals="240" scale="1"></a></li><li><a href=""><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/808dde55b96353d4563d0c4ef608dcec" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-808dde55b96353d4563d0c4ef608dcec-0"></a></li><li><a href="http://www.facebook.com/piyushchauhan2002"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/picture(4)" class="avatar avatar-240" height="48" width="48" originals="240" scale="1"></a></li><li><a href=""><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/d5735e77255b30909c62f08d17f1ded6" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-d5735e77255b30909c62f08d17f1ded6-0"></a></li><li><a href=""><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/77f4bcfcf3c2f2e83c98f81e0fd9b3eb" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-77f4bcfcf3c2f2e83c98f81e0fd9b3eb-0"></a></li><li><a href=""><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/6a5dd0e2cbfd86bfefc8c78dbf741720" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-6a5dd0e2cbfd86bfefc8c78dbf741720-0"></a></li><li><a href="http://learncandcppeasy.blogspot.com/"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/cd69f8394a1383c1b52f640c7c9486aa" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-cd69f8394a1383c1b52f640c7c9486aa-0"></a></li><li><a href="http://ronzii.wordpress.com/"><img alt="" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/9a8d8ff8cbfe6dae3e990b7caeeb43b1" class="avatar avatar-48 grav-hashed hoverZoomLink" height="48" width="48" id="grav-9a8d8ff8cbfe6dae3e990b7caeeb43b1-0"></a></li></ul></div>
+
+</div>
+
+</div>
+
+<div id="footer">
+	<p><a href="https://wordpress.com/?ref=footer_blog">Blog at WordPress.com</a>. <a href="https://wordpress.com/themes/journalist/" title="Learn more about this theme">The Journalist v1.9 Theme</a>.</p>
+</div>
+<script type="text/javascript" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/wpgroho.js"></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-88a5fd4b33274fcb50c7d183a327c85c">
+	</div>
+	<div class="grofile-hash-map-14776da102709e4e3f9310b64c288146">
+	</div>
+	<div class="grofile-hash-map-907c8a22c2e6158652ca2896ec6bde2b">
+	</div>
+	<div class="grofile-hash-map-0e622fee83fcd04bac70653f6dfd508f">
+	</div>
+	<div class="grofile-hash-map-60401b326632d9f7def9f258670961b4">
+	</div>
+	<div class="grofile-hash-map-d42495816a6a1ee639e383fa9bb5786a">
+	</div>
+	<div class="grofile-hash-map-114fa5de9897f4be46d8ff7e45e580d9">
+	</div>
+	<div class="grofile-hash-map-630c50ec861f6840d5a8409a9681f31b">
+	</div>
+	<div class="grofile-hash-map-1084bd24fd2c4cc720252e1bdb0bb78c">
+	</div>
+	<div class="grofile-hash-map-60401b326632d9f7def9f258670961b4">
+	</div>
+	<div class="grofile-hash-map-a9479d6358887d9387d6c04bae765a01">
+	</div>
+	<div class="grofile-hash-map-1e88b3e460895dfb25337f6140e39b2c">
+	</div>
+	</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"http:\/\/comeoncodeon.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/comeoncodeon.wordpress.com\/wp-login.php?action=logout&_wpnonce=022d5328fe","homeURL":"http:\/\/comeoncodeon.wordpress.com\/","postID":"490","gravDefault":"identicon","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"0","userIsLoggedIn":"","isJetpack":"0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/saved_resource(3)"></script>
+
+	<div id="bit" class="loggedout-follow-normal" style="bottom: -252px;">
+		<a class="bsub" href="javascript:void(0)"><span id="bsub-text">Follow</span></a>
+		<div id="bitsubscribe">
+
+					<h3><label for="loggedout-follow-field">Follow “COME ON CODE ON”</label></h3>
+
+			<form action="https://subscribe.wordpress.com/" method="post" accept-charset="utf-8" id="loggedout-follow">
+			<p>Get every new post delivered to your Inbox.</p>
+
+			<p id="loggedout-follow-error" style="display: none;"></p>
+
+						<p class="bit-follow-count">Join 249 other followers</p>
+			<p><input type="email" name="email" value="Enter your email address" onfocus="this.value=(this.value==&quot;Enter your email address&quot;) ? &quot;&quot; : this.value;" onblur="this.value=(this.value==&quot;&quot;) ? &quot;Enter email address&quot; : this.value;" id="loggedout-follow-field"></p>
+
+			<input type="hidden" name="action" value="subscribe">
+			<input type="hidden" name="blog_id" value="6510929">
+			<input type="hidden" name="source" value="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/">
+			<input type="hidden" name="sub-type" value="loggedout-follow">
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="af186b4373"><input type="hidden" name="_wp_http_referer" value="/2011/05/08/recurrence-relation-and-matrix-exponentiation/">
+			<p id="bsub-subscribe-button"><input type="submit" value="Sign me up"></p>
+			</form>
+					<div id="bsub-credit"><a href="https://wordpress.com/?ref=lof">Powered by WordPress.com</a></div>
+		</div><!-- #bitsubscribe -->
+	</div><!-- #bit -->
+<script type="text/javascript" charset="UTF-8" id="polldaddyRatings"><!--//--><![CDATA[//><!--
+PDRTJS_settings_381144_post_490={"id":381144,"unique_id":"wp-post-490","title":"Recurrence%20Relation%20and%20Matrix%26nbsp%3BExponentiation","permalink":"http:\/\/comeoncodeon.wordpress.com\/2011\/05\/08\/recurrence-relation-and-matrix-exponentiation\/","item_id":"_post_490"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_381144_post_490 == 'undefined' ){PDRTJS_381144_post_490 = new PDRTJS_RATING( PDRTJS_settings_381144_post_490 );}}
+//--><!]]></script><script type="text/javascript" charset="UTF-8" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/rating.js"></script>
+	<script type="text/javascript">
+		WPCOM_sharing_counts = {"http:\/\/comeoncodeon.wordpress.com\/2011\/05\/08\/recurrence-relation-and-matrix-exponentiation\/":490}	</script>
+		<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+			
+			<script type="text/javascript">
+			  (function() {
+			    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			    po.src = 'https://apis.google.com/js/plusone.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			  })();
+			</script>
+			<script type="text/javascript">
+			jQuery( document ).ready( function() {
+			    jQuery.getScript( '//platform.linkedin.com/in.js?async=true', function success() {
+			        IN.init();
+			    });
+			});
+			jQuery( document.body ).on( 'post-load', function() {
+				if ( typeof IN != 'undefined' )
+					IN.parse();
+			});
+			</script><script type="text/javascript" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/share.js"></script>					<script type="text/javascript">
+				// Pinterest shared resources
+				var s = document.createElement("script");
+				s.type = "text/javascript";
+				s.async = true;
+				s.src = window.location.protocol + "//assets.pinterest.com/js/pinit.js";
+				var x = document.getElementsByTagName("script")[0];
+				x.parentNode.insertBefore(s, x);
+				// if 'Pin it' button has 'counts' make container wider
+				jQuery(window).load( function(){ jQuery( 'li.share-pinterest a span:visible' ).closest( '.share-pinterest' ).width( '80px' ); } );
+			</script>
+				<iframe src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/master.htm" scrolling="no" id="likes-master" name="likes-master" style="display:none;"></iframe>
+		<div id="likes-other-gravatars"><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+		<script type="text/javascript">
+		//<![CDATA[
+			var jetpackLikesWidgetQueue = [];
+			var jetpackLikesWidgetBatch = [];
+			var jetpackLikesMasterReady = false;
+
+			function JetpackLikespostMessage( message, target ) {
+				if ( "string" === typeof message ){
+					try{
+						message = JSON.parse( message );
+					}
+					catch(e) {
+						return;
+					}
+				}
+
+				pm( {
+					target: target,
+					type: 'likesMessage',
+					data: message,
+					origin: '*'
+				} );
+			}
+
+			function JetpackLikesBatchHandler() {
+				var requests = [];
+				jQuery( 'div.jetpack-likes-widget-unloaded' ).each( function( i ) {
+					if ( jetpackLikesWidgetBatch.indexOf( this.id ) > -1 )
+						return;
+					jetpackLikesWidgetBatch.push( this.id );
+					var regex = /like-(post|comment)-wrapper-(\d+)-(\d+)-(\w+)/;
+					var match = regex.exec( this.id );
+					if ( ! match || match.length != 5 )
+						return;
+
+					var info = {
+						blog_id: match[2],
+						width:   this.width
+					};
+
+					if ( 'post' == match[1] ) {
+						info.post_id = match[3];
+					} else if ( 'comment' == match[1] ) {
+						info.comment_id = match[3];
+					}
+
+					info.obj_id = match[4];
+
+					requests.push( info );
+				});
+
+				if ( requests.length > 0 ) {
+					JetpackLikespostMessage( { event: 'initialBatch', requests: requests }, window.frames['likes-master'] );
+				}
+			}
+
+			function JetpackLikesMessageListener( event ) {
+				if ( "undefined" == typeof event.event )
+					return;
+
+				if ( 'masterReady' == event.event ) {
+					jQuery( document ).ready( function() {
+						jetpackLikesMasterReady = true;
+
+						var stylesData = {
+								event: 'injectStyles'
+						};
+
+						if ( jQuery( 'iframe.admin-bar-likes-widget' ).length > 0 ) {
+							JetpackLikespostMessage( { event: 'adminBarEnabled' }, window.frames[ 'likes-master' ] );
+
+							stylesData.adminBarStyles = {
+								background: jQuery( '#wpadminbar .quicklinks li#wp-admin-bar-wpl-like > a' ).css( 'background' ),
+								isRtl: ( 'rtl' == jQuery( '#wpadminbar' ).css( 'direction' ) )
+							};
+						}
+
+						if ( !window.addEventListener )
+							jQuery( '#wp-admin-bar-admin-bar-likes-widget' ).hide();
+
+						stylesData.textStyles = {
+							color: jQuery( '.sd-text-color').css( 'color' ),
+							fontFamily: jQuery( '.sd-text-color' ).css( 'font-family' ),
+							fontSize: jQuery( '.sd-text-color' ).css( 'font-size' ),
+							direction: jQuery( '.sd-text-color' ).css( 'direction' ),
+							fontWeight: jQuery( '.sd-text-color' ).css( 'font-weight' ),
+							fontStyle: jQuery( '.sd-text-color' ).css( 'font-style' ),
+							textDecoration: jQuery( '.sd-text-color' ).css('text-decoration')
+						};
+
+						stylesData.linkStyles = {
+							color: jQuery( '.sd-link-color' ).css('color'),
+							fontFamily: jQuery( '.sd-link-color' ).css('font-family'),
+							fontSize: jQuery( '.sd-link-color' ).css('font-size'),
+							textDecoration: jQuery( '.sd-link-color' ).css('text-decoration'),
+							fontWeight: jQuery( '.sd-link-color' ).css( 'font-weight' ),
+							fontStyle: jQuery( '.sd-link-color' ).css( 'font-style' )
+						};
+
+						JetpackLikespostMessage( stylesData, window.frames[ 'likes-master' ] );
+
+						JetpackLikesBatchHandler();
+
+						jQuery( document ).on( 'inview', 'div.jetpack-likes-widget-unloaded', function() {
+							jetpackLikesWidgetQueue.push( this.id );
+						});
+					});
+				}
+
+				if ( 'showLikeWidget' == event.event ) {
+					jQuery( '#' + event.id + ' .post-likes-widget-placeholder'  ).fadeOut( 'fast', function() {
+						jQuery( '#' + event.id + ' .post-likes-widget' ).fadeIn( 'fast', function() {
+							JetpackLikespostMessage( { event: 'likeWidgetDisplayed', blog_id: event.blog_id, post_id: event.post_id, obj_id: event.obj_id }, window.frames['likes-master'] );
+						});
+					});
+				}
+
+				if ( 'clickReblogFlair' == event.event ) {
+					wpcom_reblog.toggle_reblog_box_flair( event.obj_id );
+				}
+
+				if ( 'showOtherGravatars' == event.event ) {
+					var $container = jQuery( '#likes-other-gravatars' );
+					var $list = $container.find( 'ul' );
+
+					$container.hide();
+					$list.html( '' );
+
+					$container.find( '.likes-text span' ).text( event.total );
+
+					jQuery.each( event.likers, function( i, liker ) {
+						$list.append( '<li class="' + liker.css_class + '"><a href="' + liker.profile_URL + '" class="wpl-liker" rel="nofollow" target="_parent"><img src="' + liker.avatar_URL + '" alt="' + liker.name + '" width="30" height="30" style="padding-right: 3px;" /></a></li>');
+					} );
+
+					var offset = jQuery( "[name='" + event.parent + "']" ).offset();
+
+					$container.css( 'left', offset.left + event.position.left - 10 + 'px' );
+					$container.css( 'top', offset.top + event.position.top - 33 + 'px' );
+
+					var rowLength = Math.floor( event.width / 37 );
+					var height = ( Math.ceil( event.likers.length / rowLength ) * 37 ) + 13;
+					if ( height > 204 ) {
+						height = 204;
+					}
+
+					$container.css( 'height', height + 'px' );
+					$container.css( 'width', rowLength * 37 - 7 + 'px' );
+
+					$list.css( 'width', rowLength * 37 + 'px' );
+
+					$container.fadeIn( 'slow' );
+
+					var scrollbarWidth = $list[0].offsetWidth - $list[0].clientWidth;
+					if ( scrollbarWidth > 0 ) {
+						$container.width( $container.width() + scrollbarWidth );
+						$list.width( $list.width() + scrollbarWidth );
+					}
+				}
+			}
+
+			pm.bind( 'likesMessage', function(e) { JetpackLikesMessageListener(e); } );
+
+			jQuery( document ).click( function( e ) {
+				var $container = jQuery( '#likes-other-gravatars' );
+
+				if ( $container.has( e.target ).length === 0 ) {
+					$container.fadeOut( 'slow' );
+				}
+			});
+
+			function JetpackLikesWidgetQueueHandler() {
+				var wrapperID;
+				if ( ! jetpackLikesMasterReady ) {
+					setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+					return;
+				}
+
+				if ( jetpackLikesWidgetQueue.length > 0 ) {
+					// We may have a widget that needs creating now
+					var found = false;
+					while( jetpackLikesWidgetQueue.length > 0 ) {
+						// Grab the first member of the queue that isn't already loading.
+						wrapperID = jetpackLikesWidgetQueue.splice( 0, 1 )[0];
+						if ( jQuery( '#' + wrapperID ).hasClass( 'jetpack-likes-widget-unloaded' ) ) {
+							found = true;
+							break;
+						}
+					}
+					if ( ! found ) {
+						setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+						return;
+					}
+				} else if ( jQuery( 'div.jetpack-likes-widget-unloaded' ).length > 0 ) {
+					// Grab any unloaded widgets for a batch request
+					JetpackLikesBatchHandler();
+
+					// Get the next unloaded widget
+					wrapperID = jQuery( 'div.jetpack-likes-widget-unloaded' ).first()[0].id;
+					if ( ! wrapperID ) {
+						// Everything is currently loaded
+						setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+						return;
+					}
+				}
+
+				if ( 'undefined' === typeof wrapperID ) {
+					setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+					return;
+				}
+
+				var $wrapper = jQuery( '#' + wrapperID );
+				$wrapper.find( 'iframe' ).remove();
+
+				if ( $wrapper.hasClass( 'slim-likes-widget' ) ) {
+					$wrapper.find( '.post-likes-widget-placeholder' ).after( "<iframe class='post-likes-widget jetpack-likes-widget' name='" + $wrapper.data( 'name' ) + "' height='22px' width='68px' frameBorder='0' scrolling='no' src='" + $wrapper.data( 'src' ) + "'></iframe>" );
+				} else {
+					$wrapper.find( '.post-likes-widget-placeholder' ).after( "<iframe class='post-likes-widget jetpack-likes-widget' name='" + $wrapper.data( 'name' ) + "' height='55px' width='100%' frameBorder='0' src='" + $wrapper.data( 'src' ) + "'></iframe>" );
+				}
+
+				$wrapper.removeClass( 'jetpack-likes-widget-unloaded' ).addClass( 'jetpack-likes-widget-loading' );
+
+				$wrapper.find( 'iframe' ).load( function( e ) {
+					var $iframe = jQuery( e.target );
+					$wrapper.removeClass( 'jetpack-likes-widget-loading' ).addClass( 'jetpack-likes-widget-loaded' );
+
+					JetpackLikespostMessage( { event: 'loadLikeWidget', name: $iframe.attr( 'name' ), width: $iframe.width() }, window.frames[ 'likes-master' ] );
+
+					if ( $wrapper.hasClass( 'slim-likes-widget' ) ) {
+						$wrapper.find( 'iframe' ).Jetpack( 'resizeable' );
+					}
+				});
+				setTimeout( JetpackLikesWidgetQueueHandler, 250 );
+			}
+			JetpackLikesWidgetQueueHandler();
+		//]]>
+		</script>
+<script type="text/javascript" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/form.js"></script>
+<script type="text/javascript" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/saved_resource(4)"></script>
+<script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://s0.wp.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?m=1395343499g&amp;ver=3.0.83c";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://s0.wp.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?m=1363304414g&amp;ver=3.0.83c";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var recaptcha_options = {"lang":"en"};
+/* ]]> */
+</script><iframe name="oauth2relay505412435" id="oauth2relay505412435" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/postmessageRelay.htm" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe>
+<script type="text/javascript" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/saved_resource(5)"></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/w.js" type="text/javascript"></script>
+<script type="text/javascript">
+st_go({'blog':'6510929','v':'wpcom','tz':'5','user_id':'0','post':'490','subd':'comeoncodeon'});
+ex_go({'crypt':'UE5XaGUuOTlwaD85flAmcm1mcmZsaDhkV11YdWFnNncxc1tjZG9XVXhRdC5QY2ZQY1U1P1QscFEzLGlVRVp8WFdzSnZobC9uMzd8MlMwTmgra1hrQVlPdEkyQzUyM2ZIZFpzRFcmNmZvaSUmMXByMVFSMTIseS96TVdQTXlGeElWdkNzNWN6RlNGRThQVFh3Jnpbc0lQMFFrdmpSb0JZTi9jLmwxJSsyRUh6R3lLTWFjeE5ab3ldQ25ISFpDc1VOeF8xakFyXXk9JmlQcmVnL3Q4N3dzPS9rT2tRPVVoeD15ZDgwW19XQS9MQUdJXWpRRW5FfE9JUXBwUTYvdkh0RmtsR0R5OT94bUhdc3poYVdpZGw9N2puWHhDXT9PJiVOJThlVXlCRC92aixlWGdKaXA3fFFYP0ZVUW01WkdlSTJyODdMdlJObUp4dEUyUmFXWXJfeiVMW2ZxTXJ+MGRlTSxxWEsuaC5SdFY='});
+addLoadEvent(function(){linktracker_init('6510929',490);});
+	</script><img id="wpstats" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/g.gif" alt=""><img id="wpstats2" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/g(1).gif" alt="" style="display:none">
+<noscript>&lt;img src="http://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /&gt;</noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+
+<div id="sharing_email" style="display: none;">
+		<form action="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/Recurrence Relation and Matrix Exponentiation   COME ON CODE ON.htm" method="post">
+			<label for="target_email">Send to Email Address</label>
+			<input type="email" name="target_email" id="target_email" value="">
+
+			
+				<label for="source_name">Your Name</label>
+				<input type="text" name="source_name" id="source_name" value="">
+
+				<label for="source_email">Your Email Address</label>
+				<input type="email" name="source_email" id="source_email" value="">
+
+			
+			<div class="recaptcha" id="sharing_recaptcha"></div><input type="hidden" name="recaptcha_public_key" id="recaptcha_public_key" value="6LcYW8MSAAAAADBAuEH9yaPcF7lWh11Iq62ZKtoo">
+			<img style="float: right; display: none" class="loading" src="./Recurrence Relation and Matrix Exponentiation   COME ON CODE ON_files/loading.gif" alt="loading" width="16" height="16">
+			<input type="submit" value="Send Email" class="sharing_send">
+			<a href="http://comeoncodeon.wordpress.com/2011/05/08/recurrence-relation-and-matrix-exponentiation/#cancel" class="sharing_cancel">Cancel</a>
+
+			<div class="errors errors-1" style="display: none;">
+				Post was not sent - check your email addresses!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				Email check failed, please try again			</div>
+
+			<div class="errors errors-3" style="display: none;">
+				Sorry, your blog cannot share posts by email.			</div>
+		</form>
+	</div></body></html>

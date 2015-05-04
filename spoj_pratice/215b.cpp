@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+main()
+{
+    int h[100001],n,m,a[100001],c[100001],i,x;
+    cin>>n>>m;
+    for(i=1;i<=n;i++)
+    {
+        cin>>a[i];
+    }
+    h[a[n]]=1;
+    c[n]=1;
+    for(i=n-1;i>=0;i--)
+    {
+        if(h[a[i]]==1)
+        {
+            c[i]=c[i+1];
+        }
+        else
+        {
+            c[i]=c[i+1]+1;
+            h[a[i]]=1;
+        }
+    }
+    for(i=0;i<m;i++)
+    {
+        cin>>x;
+        cout<<c[x]<<endl;
+    }
+}

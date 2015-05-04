@@ -1,0 +1,1 @@
+Let's notice that sum in the rectangle (x1, y1, x2, y2) is sum(x1, x2)·sum(y1, y2). Where sum(l, r) = sl + sl + 1 + ... + sr. Then, we have to calc sum(l, r) for every pair (l, r) and count how many segments give us sum x for any possible x (0 ≤ x ≤ 9·|s|). In the end we should enumerate sum on segemnt [x1, x2] and find . There is corner case a = 0.
